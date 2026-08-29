@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ViraCheck — Gizlilik Politikası</title>
+<style>
+  :root{
+    --bg:#ffffff; --fg:#12202e; --muted:#5a6b7c; --line:#e3e9ef;
+    --accent:#0f9c92; --card:#f6f9fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0A1420; --fg:#e8eef4; --muted:#93a4b5; --line:#1e2c3b;
+           --accent:#2ED3C6; --card:#101d2b; }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:40px 22px 80px}
+  header{border-bottom:1px solid var(--line); padding-bottom:22px; margin-bottom:30px}
+  .brand{display:flex; align-items:center; gap:10px; margin-bottom:14px}
+  .dot{width:11px;height:11px;border-radius:50%;background:var(--accent);flex:none}
+  .brand span{font-weight:700; letter-spacing:.02em}
+  h1{font-size:1.75rem; line-height:1.25; margin:0 0 8px}
+  .date{color:var(--muted); font-size:.9rem; margin:0}
+  .lang{margin-top:16px; font-size:.9rem}
+  .lang a{color:var(--accent)}
+  h2{font-size:1.12rem; margin:34px 0 10px; line-height:1.35}
+  p{margin:0 0 14px}
+  ul{margin:0 0 14px; padding-left:22px}
+  li{margin-bottom:7px}
+  a{color:var(--accent); overflow-wrap:anywhere}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; margin:0 0 8px}
+  .card p:last-child, .card ul:last-child{margin-bottom:0}
+  footer{margin-top:50px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand"><span class="dot"></span><span>ViraCheck</span></div>
+  <h1>Gizlilik Politikası</h1>
+  <p class="date">Son güncelleme: 29 Ağustos 2026</p>
+  <p class="lang"><a href="privacy-en.html">Read in English →</a></p>
+</header>
+
+<p>ViraCheck; denize açılmadan önceki kontrolleri, seyir defterinizi ve hava/deniz durumunu tek yerde toplayan bir mobil uygulamadır. Bu politika, uygulamanın hangi verilere eriştiğini ve bunlarla ne yaptığını açıklar.</p>
+
+<div class="card">
+  <p><strong>Kısaca</strong></p>
+  <ul>
+    <li>ViraCheck'te hesap yoktur; kayıt olmanız gerekmez.</li>
+    <li>Oluşturduğunuz içerik yalnızca cihazınızda saklanır.</li>
+    <li>Bize ait bir sunucu yoktur; verilerinizi toplamıyor, saklamıyor veya satmıyoruz.</li>
+    <li>Reklam ağı, analiz veya kullanıcı takip aracı kullanmıyoruz.</li>
+  </ul>
+</div>
+
+<h2>1. Cihazınızda saklanan veriler</h2>
+<p>Aşağıdakiler yalnızca telefonunuzun yerel deposunda tutulur:</p>
+<ul>
+  <li>Kontrol listeleri ve işaretlediğiniz maddeler</li>
+  <li>Seyir defteri kayıtları (kalkış ve varış limanı ile zamanı, mesafe, motor saati, yakıt, mürettebat, hava notu, rota notları)</li>
+  <li>Tekne bilgileri</li>
+  <li>Uygulama ayarları</li>
+</ul>
+<p>Bu veriler cihazınızdan çıkmaz; bize iletilmez. Cihazınızda iCloud yedeklemesi açıksa bu içerik Apple'ın yedeğine dahil olabilir ve bu durumda Apple'ın gizlilik politikasına tabi olur.</p>
+
+<h2>2. Konum</h2>
+<p>Rüzgâr, dalga ve seyre uygunluk bilgisini bulunduğunuz mevkiye göre hesaplayabilmek için konum izni isteriz.</p>
+<ul>
+  <li>Konumunuz uygulama tarafından kaydedilmez, saklanmaz veya geçmişi tutulmaz.</li>
+  <li>Koordinatlarınız yalnızca tahmin sorgusu yapılırken Open-Meteo'ya gönderilir.</li>
+  <li>Bulunduğunuz yerin adını ekranda gösterebilmek için koordinatlar, cihazın işletim sistemi aracılığıyla Apple'ın adres çözümleme servisine iletilir.</li>
+  <li>İzin vermezseniz uygulamanın geri kalanı normal çalışır; yalnızca hava ve deniz durumu gösterilemez.</li>
+  <li>İzni istediğiniz zaman iOS <em>Ayarlar</em> üzerinden geri alabilirsiniz.</li>
+</ul>
+
+<h2>3. Hava ve deniz durumu</h2>
+<p>Tahmin verileri <a href="https://open-meteo.com">Open-Meteo</a>'dan alınır. Bu isteklerde yalnızca koordinatlar ve istenen tahmin alanları iletilir; kimliğinizi belirten hiçbir bilgi gönderilmez. Open-Meteo'nun koşulları: <a href="https://open-meteo.com/en/terms">open-meteo.com/en/terms</a></p>
+
+<h2>4. Abonelik ve satın alma</h2>
+<p>ViraCheck Pro aboneliği App Store üzerinden satılır ve <a href="https://www.revenuecat.com">RevenueCat</a> ile yönetilir.</p>
+<ul>
+  <li>Ödeme bilgileriniz Apple tarafından işlenir ve bize hiçbir zaman iletilmez.</li>
+  <li>RevenueCat, abonelik durumunuzu takip edebilmek için rastgele üretilmiş anonim bir kullanıcı kimliğiyle satın alma bilgilerini (ürün, tarih, yenilenme durumu) ve cihaz türü, ülke gibi teknik bilgileri işler. Adınız veya e-posta adresiniz iletilmez.</li>
+  <li>RevenueCat gizlilik politikası: <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></li>
+  <li>Apple Media Services gizlilik politikası: <a href="https://www.apple.com/legal/privacy/data/tr/app-store/">apple.com/legal/privacy/data/tr/app-store</a></li>
+</ul>
+
+<h2>5. Bildirimler</h2>
+<p>Uygulama yalnızca cihaz üzerinde çalışan yerel bildirimler kullanır (örneğin uygun gün hatırlatması). Uzaktan bildirim (push) altyapısı uygulamada devre dışı bırakılmıştır; bildirim gönderebilmek için hiçbir sunucuya veri iletilmez.</p>
+
+<h2>6. Çocukların gizliliği</h2>
+<p>ViraCheck 13 yaşın altındaki kullanıcılara yönelik değildir ve bilerek çocuklardan veri toplamaz.</p>
+
+<h2>7. Verilerinizi silme</h2>
+<p>Uygulama içindeki ilgili bölümlerden kontrol listelerinizi ve tekne bilgilerinizi sıfırlayabilirsiniz. Tüm yerel verileri kalıcı olarak silmek için uygulamayı cihazınızdan kaldırmanız yeterlidir.</p>
+<p>Aboneliğinizi iOS <em>Ayarlar → Apple Kimliğiniz → Abonelikler</em> yolundan yönetebilir veya iptal edebilirsiniz. Abonelik kayıtları Apple ve RevenueCat tarafında tutulur.</p>
+
+<h2>8. Bu politikadaki değişiklikler</h2>
+<p>Politika güncellenirse bu sayfanın üstündeki "son güncelleme" tarihi değişir. Önemli değişikliklerde uygulama içinde ayrıca bilgilendirme yapılır.</p>
+
+<h2>9. İletişim</h2>
+<p>Gizlilikle ilgili sorularınız için: <a href="mailto:egeseymen@icloud.com">egeseymen@icloud.com</a></p>
+
+<footer>
+  ViraCheck · Ege Seymen
+</footer>
+
+</div>
+</body>
+</html>
