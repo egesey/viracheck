@@ -44,7 +44,7 @@
 <header>
   <div class="brand"><span class="dot"></span><span>ViraCheck</span></div>
   <h1>Privacy Policy</h1>
-  <p class="date">Last updated: 29 August 2026</p>
+  <p class="date">Last updated: 1 September 2026</p>
   <p class="lang"><a href="privacy-tr.html">Türkçe oku →</a></p>
 </header>
 
@@ -73,15 +73,17 @@
 <h2>2. Location</h2>
 <p>We ask for location permission so the app can calculate wind, wave, and go/no-go information for where you actually are.</p>
 <ul>
-  <li>The app does not record, store, or keep a history of your location.</li>
-  <li>Your coordinates are sent to Open-Meteo only while a forecast request is being made.</li>
+  <li>Your precise location is not stored on your device, and no location history is kept.</li>
+  <li>Your coordinates are sent to Open-Meteo and OpenStreetMap only while a forecast or cove request is being made.</li>
+  <li>So the nearby cove list is not re-fetched every time, an <strong>approximate</strong> location (about 1 km resolution) is cached on your device alongside the results. This cache is capped at 12 areas, never leaves your device, and is removed by <em>Reset data</em>.</li>
   <li>To display the name of your location on screen, the coordinates are passed to Apple's geocoding service through your device's operating system.</li>
   <li>If you decline the permission, the rest of the app works normally — only the weather and sea state cannot be shown.</li>
   <li>You can revoke the permission at any time in iOS <em>Settings</em>.</li>
 </ul>
 
-<h2>3. Weather and sea state</h2>
+<h2>3. Weather, sea state and cove data</h2>
 <p>Forecast data comes from <a href="https://open-meteo.com">Open-Meteo</a>. These requests carry only coordinates and the requested forecast fields; nothing identifying you is sent. Open-Meteo's terms: <a href="https://open-meteo.com/en/terms">open-meteo.com/en/terms</a></p>
+<p>The nearby cove and beach list comes from <a href="https://www.openstreetmap.org">OpenStreetMap</a> data via the <a href="https://overpass-api.de">Overpass API</a>. These requests likewise carry only your coordinates and the search radius; no account or identifying information is sent.</p>
 
 <h2>4. Subscriptions and purchases</h2>
 <p>The ViraCheck Pro subscription is sold through the App Store and managed with <a href="https://www.revenuecat.com">RevenueCat</a>.</p>
