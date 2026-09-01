@@ -3,55 +3,267 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ViraCheck — Yasal / Legal</title>
+<title>ViraCheck — Tekne seyir asistanı</title>
+<meta name="description" content="Kalkış öncesi kontrol listeleri, rüzgâr ve deniz durumu, yakındaki koylar ve seyir defteri. Hesap yok, sunucu yok — her şey cihazınızda kalır.">
+<link rel="canonical" href="https://egesey.github.io/viracheck/">
+<meta property="og:title" content="ViraCheck — Tekne seyir asistanı">
+<meta property="og:description" content="Denize açılmadan önce her şey yerinde mi? Kontrol listeleri, hava ve deniz durumu, koylar ve seyir defteri.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://egesey.github.io/viracheck/">
 <style>
   :root{
     --bg:#ffffff; --fg:#12202e; --muted:#5a6b7c; --line:#e3e9ef;
-    --accent:#0f9c92; --card:#f6f9fb;
+    --accent:#0f9c92; --card:#f6f9fb; --shot:#dfe8ef;
   }
   @media (prefers-color-scheme: dark){
     :root{ --bg:#0A1420; --fg:#e8eef4; --muted:#93a4b5; --line:#1e2c3b;
-           --accent:#2ED3C6; --card:#101d2b; }
+           --accent:#2ED3C6; --card:#101d2b; --shot:#0d1826; }
   }
   *{box-sizing:border-box}
   body{
     margin:0; background:var(--bg); color:var(--fg);
     font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    display:flex; align-items:center; justify-content:center; min-height:100vh;
+    -webkit-text-size-adjust:100%;
   }
-  .wrap{max-width:520px; width:100%; padding:40px 22px}
-  .brand{display:flex; align-items:center; gap:10px; margin-bottom:18px}
+  .wrap{max-width:960px; margin:0 auto; padding:0 22px}
+  a{color:var(--accent); overflow-wrap:anywhere}
+
+  /* ---------------------------------------------------------- başlık */
+  header{padding:26px 0; display:flex; align-items:center; justify-content:space-between; gap:16px}
+  .brand{display:flex; align-items:center; gap:10px}
   .dot{width:11px;height:11px;border-radius:50%;background:var(--accent);flex:none}
   .brand span{font-weight:700; letter-spacing:.02em}
-  h1{font-size:1.5rem; margin:0 0 6px}
-  p.sub{color:var(--muted); margin:0 0 28px}
-  a.item{
-    display:block; background:var(--card); border:1px solid var(--line);
-    border-radius:12px; padding:16px 18px; margin-bottom:12px;
-    text-decoration:none; color:var(--fg);
+  header nav{font-size:.9rem}
+
+  /* ------------------------------------------------------------ hero */
+  .hero{padding:44px 0 10px; text-align:center}
+  h1{font-size:2.5rem; line-height:1.15; margin:0 0 16px; letter-spacing:-.02em}
+  .lead{font-size:1.15rem; color:var(--muted); margin:0 auto 26px; max-width:620px}
+  .badge{
+    display:inline-flex; align-items:center; gap:9px;
+    background:var(--card); border:1px solid var(--line); border-radius:999px;
+    padding:9px 18px; font-size:.92rem; color:var(--muted);
   }
-  a.item:hover{border-color:var(--accent)}
-  a.item strong{display:block; color:var(--accent); margin-bottom:2px}
-  a.item span{color:var(--muted); font-size:.9rem}
-  footer{margin-top:28px; color:var(--muted); font-size:.85rem}
+  .badge b{color:var(--fg); font-weight:600}
+
+  /* ------------------------------------------------------- görseller */
+  .shots{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+    margin:46px 0 8px;
+  }
+  .shot{margin:0; text-align:center}
+  .shot img{
+    width:100%; height:auto; display:block;
+    border-radius:18px; border:1px solid var(--line); background:var(--shot);
+  }
+  .shot figcaption{margin-top:11px; font-size:.85rem; color:var(--muted)}
+  @media (max-width:640px){
+    .shots{grid-template-columns:1fr; max-width:320px; margin-inline:auto}
+    h1{font-size:1.9rem}
+    .lead{font-size:1.05rem}
+  }
+
+  /* -------------------------------------------------------- bölümler */
+  section{padding:54px 0; border-top:1px solid var(--line)}
+  section:first-of-type{border-top:none}
+  h2{font-size:1.45rem; margin:0 0 10px; letter-spacing:-.01em}
+  .sub{color:var(--muted); margin:0 0 28px; max-width:640px}
+
+  .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
+  @media (max-width:640px){ .grid{grid-template-columns:1fr} }
+  .card{
+    background:var(--card); border:1px solid var(--line);
+    border-radius:14px; padding:20px 22px;
+  }
+  .card h3{margin:0 0 7px; font-size:1.02rem}
+  .card p{margin:0; color:var(--muted); font-size:.95rem}
+
+  .note{
+    background:var(--card); border:1px solid var(--line);
+    border-radius:14px; padding:22px 24px;
+  }
+  .note ul{margin:12px 0 0; padding-left:20px; color:var(--muted)}
+  .note li{margin-bottom:7px}
+  .note li:last-child{margin-bottom:0}
+
+  footer{
+    border-top:1px solid var(--line); margin-top:20px;
+    padding:30px 0 60px; color:var(--muted); font-size:.9rem;
+  }
+  footer p{margin:0 0 8px}
+  .fine{font-size:.82rem; opacity:.85}
 </style>
 </head>
 <body>
 <div class="wrap">
+
+<header>
   <div class="brand"><span class="dot"></span><span>ViraCheck</span></div>
-  <h1>Yasal belgeler / Legal</h1>
-  <p class="sub">Denize açılmadan önce kontrol · Pre-departure checks</p>
+  <nav><a href="index-en.html">In English →</a></nav>
+</header>
 
-  <a class="item" href="privacy-tr.html">
-    <strong>Gizlilik Politikası</strong>
-    <span>Türkçe</span>
-  </a>
-  <a class="item" href="privacy-en.html">
-    <strong>Privacy Policy</strong>
-    <span>English</span>
-  </a>
+<div class="hero">
+  <h1>Denize açılmadan önce,<br>her şey yerinde mi?</h1>
+  <p class="lead">
+    Kalkış öncesi kontrol listeleri, rüzgâr ve deniz durumu, yakındaki koylar ve
+    seyir defteri — tek uygulamada. Hesap açmadan, hiçbir sunucuya kaydolmadan.
+  </p>
+  <p class="badge"><b>App Store'da yakında</b> · iPhone ve iPad</p>
+</div>
 
-  <footer>ViraCheck · Ege Seymen · <a href="mailto:egeseymen@icloud.com" style="color:var(--accent)">egeseymen@icloud.com</a></footer>
+<div class="shots">
+  <figure class="shot">
+    <img src="screens/kontrol.png" alt="Kontroller sekmesi: sefere hazırlık yüzdesi, anlık rüzgâr durumu ve kontrol listeleri" width="720" height="1565" loading="lazy">
+    <figcaption>Kalkış öncesi kontrol</figcaption>
+  </figure>
+  <figure class="shot">
+    <img src="screens/hava.png" alt="Hava sekmesi: rüzgâr gülü, Beaufort kuvveti, hamle hızı ve deniz durumu" width="720" height="1565" loading="lazy">
+    <figcaption>Rüzgâr ve deniz durumu</figcaption>
+  </figure>
+  <figure class="shot">
+    <img src="screens/koylar.png" alt="Koylar sekmesi: yakındaki koy ve plajlar, mesafeleriyle birlikte" width="720" height="1565" loading="lazy">
+    <figcaption>Yakındaki koylar</figcaption>
+  </figure>
+</div>
+
+<section>
+  <h2>Ne yapar?</h2>
+  <p class="sub">
+    ViraCheck, tekneyle denize çıkan herkesin her seferde tekrarladığı işleri
+    tek yerde toplar — hazırlıktan seyir kaydına kadar.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Kalkış öncesi kontrol listeleri</h3>
+      <p>
+        Hazır listelerle yola çıkın: kalkış öncesi kontroller, güvenlik
+        ekipmanı, motor ve yakıt. İşaretledikçe sefere hazırlık yüzdeniz artar,
+        eksik kalan madde gözden kaçmaz.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Rüzgâr, dalga ve deniz durumu</h3>
+      <p>
+        Bulunduğunuz mevkiye göre rüzgâr yönü ve hızı, hamle, Beaufort kuvveti,
+        dalga yüksekliği ve periyodu, deniz suyu sıcaklığı ve basınç. Saatlik
+        rüzgâr şeridi ve günlük özet ile.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Seyre uygun mu?</h3>
+      <p>
+        Ham sayı yerine yorum: rüzgâr ve hamle birlikte değerlendirilip
+        "gidilir", "dikkatli ol" ya da "bugün olmaz" şeklinde net bir tavsiyeye
+        çevrilir.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Yakındaki koylar ve rota</h3>
+      <p>
+        Çevrenizdeki koy ve plajlar, mevkinize uzaklıklarıyla deniz mili
+        cinsinden listelenir. Birkaçını seçin, uygulama en yakından başlayarak
+        sıralayıp toplam mesafeyi haritada gösterir.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Seyir defteri</h3>
+      <p>
+        Her seferi kaydedin: kalkış ve varış limanı, saatler, mesafe, motor
+        saati, yakıt, mürettebat ve notlar. Defterinizi istediğiniz zaman PDF
+        olarak dışa aktarıp paylaşın.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Tekne bilgileri ve belgeler</h3>
+      <p>
+        Tekne adı, tipi, boyu, bağlama limanı, çağrı işareti ve MMSI tek yerde.
+        Sigorta ve ruhsat gibi belgelerin bitiş tarihlerini girin, süresi
+        dolmadan uyarı alın.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Acil durumda hazır</h2>
+  <p class="sub">
+    Panik anında doğru cümleyi kurmak zordur. ViraCheck imdat ekranı, tekne
+    bilgilerinizle önceden doldurulmuş bir MAYDAY metni hazırlar.
+  </p>
+  <div class="note">
+    <ul>
+      <li>Tekne adınız, MMSI'niz ve mevkiiniz yerleştirilmiş MAYDAY metni — okumanız yeterli</li>
+      <li>Sahil Güvenlik (158) ve acil çağrı (112) için tek dokunuşla arama</li>
+      <li>VHF kanal 16 hatırlatması ve PAN-PAN kullanımı</li>
+      <li>Denize adam düştüğünde izlenecek adımlar, sırayla</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Hesap yok. Sunucu yok.</h2>
+  <p class="sub">
+    ViraCheck'te kayıt olmazsınız, çünkü kaydolacak bir yer yok.
+  </p>
+  <div class="note">
+    <ul>
+      <li>Kontrol listeleriniz, seyir defteriniz ve tekne bilgileriniz yalnızca telefonunuzda saklanır</li>
+      <li>Bize ait bir sunucu yok — verilerinizi toplamıyor, saklamıyor veya satmıyoruz</li>
+      <li>Reklam ağı, analiz aracı veya kullanıcı takibi kullanılmıyor</li>
+      <li>Konumunuz yalnızca tahmin ve koy sorgusu yapılırken kullanılır</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Ücretsiz ve Pro</h2>
+  <p class="sub">
+    Uygulamanın tamamı ücretsiz kullanılabilir. Pro, sınırları kaldırır.
+  </p>
+  <div class="grid">
+    <div class="card">
+      <h3>Ücretsiz</h3>
+      <p>
+        Kontrol listeleri, anlık hava ve deniz durumu, seyre uygunluk tavsiyesi,
+        imdat ekranı ve seyir defteri — hepsi kullanılabilir durumda,
+        makul sınırlarla.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Pro</h3>
+      <p>
+        7 günlük rüzgâr tahmini, 24 saatlik saatlik şerit, sınırsız sefer kaydı,
+        tüm hazır kontrol listeleri ve yakındaki koyların tamamı. Aylık veya
+        yıllık.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>
+    <a href="privacy-tr.html">Gizlilik Politikası</a> ·
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Kullanım Koşulları</a> ·
+    <a href="mailto:egeseymen@icloud.com">İletişim</a> ·
+    <a href="index-en.html">In English</a>
+  </p>
+  <p class="fine">
+    Hava ve deniz verileri: <a href="https://open-meteo.com">Open-Meteo</a> (CC BY 4.0) ·
+    Koy ve plaj verileri © <a href="https://www.openstreetmap.org">OpenStreetMap</a> katkıda bulunanları
+  </p>
+  <p class="fine">
+    ViraCheck bir yardımcı araçtır; resmî denizcilik uyarılarının, seyir
+    haritalarının ve kaptanın kararının yerine geçmez.
+  </p>
+  <p class="fine">ViraCheck · Ege Seymen</p>
+</footer>
+
 </div>
 </body>
 </html>
