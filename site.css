@@ -1,23 +1,19 @@
 /* ViraCheck — tanıtım sitesi
  *
- * Renkler uygulamanın kendi paletinden gelir (src/theme). Kahraman bölümü
- * temadan bağımsız olarak her zaman koyudur: uygulama yalnızca koyu temada
- * çalışıyor, sayfaya ilk bakışta o his verilmeli. Sayfanın geri kalanı
- * ziyaretçinin sistem temasını takip eder.
+ * Renkler uygulamanın kendi paletinden gelir (src/theme). Site tamamen
+ * koyudur ve sistem temasını TAKİP ETMEZ: uygulama yalnızca koyu temada
+ * çalışıyor (app.json → userInterfaceStyle: "dark"), sitenin de aynı
+ * karakterde olması gerekiyor. Gövde zemini kahraman gradyanının bittiği
+ * renkle (--deep) aynı, böylece bölümler arasında dikiş görünmüyor.
  */
 
 :root{
-  --bg:#ffffff; --fg:#12202e; --muted:#5a6b7c; --line:#e3e9ef;
-  --accent:#0f9c92; --accent-soft:#0f9c9218; --card:#f6f9fb;
+  color-scheme:dark;
+  --bg:#0A1420; --fg:#e8eef4; --muted:#93a4b5; --line:#1e2c3b;
+  --accent:#2ED3C6; --accent-soft:#2ED3C61f; --card:#101d2b;
   --deep:#0A1420; --deep-2:#0f2233; --on-deep:#e8eef4; --on-deep-muted:#93a4b5;
   --teal:#2ED3C6; --danger:#e5484d;
   --radius:16px;
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#0A1420; --fg:#e8eef4; --muted:#93a4b5; --line:#1e2c3b;
-    --accent:#2ED3C6; --accent-soft:#2ED3C61f; --card:#101d2b;
-  }
 }
 
 *{box-sizing:border-box}
