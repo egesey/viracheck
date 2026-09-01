@@ -1,0 +1,200 @@
+/* ViraCheck — tanıtım sitesi
+ *
+ * Renkler uygulamanın kendi paletinden gelir (src/theme). Kahraman bölümü
+ * temadan bağımsız olarak her zaman koyudur: uygulama yalnızca koyu temada
+ * çalışıyor, sayfaya ilk bakışta o his verilmeli. Sayfanın geri kalanı
+ * ziyaretçinin sistem temasını takip eder.
+ */
+
+:root{
+  --bg:#ffffff; --fg:#12202e; --muted:#5a6b7c; --line:#e3e9ef;
+  --accent:#0f9c92; --accent-soft:#0f9c9218; --card:#f6f9fb;
+  --deep:#0A1420; --deep-2:#0f2233; --on-deep:#e8eef4; --on-deep-muted:#93a4b5;
+  --teal:#2ED3C6; --danger:#e5484d;
+  --radius:16px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0A1420; --fg:#e8eef4; --muted:#93a4b5; --line:#1e2c3b;
+    --accent:#2ED3C6; --accent-soft:#2ED3C61f; --card:#101d2b;
+  }
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-text-size-adjust:100%; -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent); text-decoration:none; overflow-wrap:anywhere}
+a:hover{text-decoration:underline}
+.wrap{max-width:1080px; margin:0 auto; padding:0 24px}
+
+/* ------------------------------------------------------------ kahraman */
+
+.hero{
+  position:relative; overflow:hidden;
+  background:linear-gradient(180deg, var(--deep-2) 0%, var(--deep) 62%);
+  color:var(--on-deep);
+}
+/* Teal ışıma — uygulamanın hava ekranındaki zemin hissi. */
+.hero::before{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(680px 420px at 50% 0%, rgba(46,211,198,.20), transparent 62%),
+    radial-gradient(420px 300px at 12% 32%, rgba(46,211,198,.08), transparent 70%);
+}
+.hero > *{position:relative}
+
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:16px; padding:22px 0;
+}
+.brand{display:flex; align-items:center; gap:11px; font-weight:700; letter-spacing:.01em}
+.brand img{width:30px; height:30px; border-radius:8px; display:block}
+.nav a{color:var(--on-deep-muted); font-size:.92rem}
+.nav a:hover{color:var(--teal)}
+
+.hero-inner{text-align:center; padding:38px 0 0}
+.hero .mark{
+  width:82px; height:82px; border-radius:20px; display:block; margin:0 auto 26px;
+  box-shadow:0 18px 40px -14px rgba(0,0,0,.8), 0 0 0 1px rgba(255,255,255,.07);
+}
+.hero h1{
+  font-size:clamp(2rem, 5.2vw, 3.35rem); line-height:1.1;
+  letter-spacing:-.028em; margin:0 0 18px; font-weight:700;
+}
+.hero .lead{
+  font-size:clamp(1.02rem, 1.8vw, 1.2rem); color:var(--on-deep-muted);
+  max-width:600px; margin:0 auto 28px;
+}
+.pill{
+  display:inline-flex; align-items:center; gap:10px;
+  border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.05);
+  border-radius:999px; padding:10px 20px; font-size:.92rem;
+  color:var(--on-deep-muted); backdrop-filter:blur(6px);
+}
+.pill b{color:var(--on-deep); font-weight:600}
+.pill .dot{
+  width:8px; height:8px; border-radius:50%; background:var(--teal);
+  box-shadow:0 0 0 4px rgba(46,211,198,.18);
+}
+
+/* ------------------------------------------------------- cihaz çerçevesi */
+
+.phone{
+  border-radius:34px; padding:7px;
+  background:linear-gradient(155deg,#33465c 0%,#16232f 42%,#0b131c 100%);
+  box-shadow:0 34px 70px -26px rgba(0,0,0,.85), 0 0 0 1px rgba(255,255,255,.05);
+}
+.phone img{display:block; width:100%; height:auto; border-radius:28px}
+
+/* Kahramandaki üçlü diziliş: ortadaki önde ve büyük, yanlar geride.
+ * Telefonlar bölümün altından taşar; sert kesik yerine zemine karışsınlar
+ * diye alta bir geçiş serilir (::after). */
+.stage{
+  position:relative;
+  display:flex; align-items:flex-end; justify-content:center;
+  gap:0; margin:52px 0 0; padding-bottom:8px;
+}
+.stage::after{
+  content:""; position:absolute; left:-40px; right:-40px; bottom:0;
+  height:150px; pointer-events:none;
+  background:linear-gradient(180deg, rgba(10,20,32,0) 0%, var(--deep) 82%);
+}
+.stage .phone{width:264px; flex:none}
+.stage .side{width:228px; opacity:.92}
+.stage .left{transform:translateX(34px) translateY(26px) rotate(-4deg); z-index:1}
+.stage .right{transform:translateX(-34px) translateY(26px) rotate(4deg); z-index:1}
+.stage .center{z-index:2}
+
+/* ------------------------------------------------------------- bölümler */
+
+section{padding:78px 0}
+section + section{border-top:1px solid var(--line)}
+.eyebrow{
+  display:inline-block; font-size:.78rem; font-weight:700; letter-spacing:.09em;
+  text-transform:uppercase; color:var(--accent); margin:0 0 12px;
+}
+h2{font-size:clamp(1.5rem, 3vw, 2rem); line-height:1.2; letter-spacing:-.02em; margin:0 0 12px}
+.sub{color:var(--muted); margin:0 0 40px; max-width:620px; font-size:1.03rem}
+
+.grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+.feature{
+  background:var(--card); border:1px solid var(--line);
+  border-radius:var(--radius); padding:26px 24px;
+}
+.icon{
+  width:42px; height:42px; border-radius:12px; margin-bottom:16px;
+  background:var(--accent-soft); color:var(--accent);
+  display:flex; align-items:center; justify-content:center;
+}
+.icon svg{width:21px; height:21px; stroke:currentColor; fill:none;
+  stroke-width:2; stroke-linecap:round; stroke-linejoin:round}
+.feature h3{margin:0 0 8px; font-size:1.06rem; letter-spacing:-.01em}
+.feature p{margin:0; color:var(--muted); font-size:.95rem; line-height:1.6}
+
+/* ------------------------------------------------------- ikili gösterim */
+
+.split{display:grid; grid-template-columns:1fr 320px; gap:64px; align-items:center}
+.split .phone{width:100%}
+.checks{list-style:none; margin:26px 0 0; padding:0}
+.checks li{
+  position:relative; padding-left:30px; margin-bottom:13px; color:var(--muted);
+}
+.checks li::before{
+  content:""; position:absolute; left:0; top:.5em;
+  width:16px; height:9px; border-left:2.5px solid var(--accent);
+  border-bottom:2.5px solid var(--accent); transform:rotate(-45deg);
+}
+.checks strong{color:var(--fg); font-weight:600}
+
+/* --------------------------------------------------------------- panel */
+
+.panel{
+  background:var(--card); border:1px solid var(--line);
+  border-radius:var(--radius); padding:34px 36px;
+}
+.panel.alert{border-color:color-mix(in srgb, var(--danger) 38%, var(--line))}
+.panel.alert .icon{background:rgba(229,72,77,.12); color:var(--danger)}
+
+/* ----------------------------------------------------------- fiyatlama */
+
+.plans{display:grid; grid-template-columns:repeat(2,1fr); gap:20px}
+.plan{
+  border:1px solid var(--line); border-radius:var(--radius);
+  padding:30px 28px; background:var(--card);
+}
+.plan.pro{border-color:var(--accent); background:var(--accent-soft)}
+.plan h3{margin:0 0 6px; font-size:1.15rem}
+.plan .tag{font-size:.82rem; color:var(--accent); font-weight:700; letter-spacing:.06em; text-transform:uppercase}
+.plan ul{list-style:none; margin:18px 0 0; padding:0; color:var(--muted); font-size:.95rem}
+.plan li{margin-bottom:9px}
+.plan li::before{content:"·"; color:var(--accent); font-weight:700; margin-right:9px}
+
+/* -------------------------------------------------------------- altlık */
+
+footer{
+  border-top:1px solid var(--line); padding:40px 0 70px;
+  color:var(--muted); font-size:.92rem;
+}
+footer .links{margin:0 0 18px; display:flex; flex-wrap:wrap; gap:8px 20px}
+.fine{font-size:.84rem; margin:0 0 9px; opacity:.9; max-width:760px}
+
+/* --------------------------------------------------------------- dar ekran */
+
+@media (max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:1fr; gap:38px}
+  .split .phone{width:270px; margin:0 auto}
+}
+@media (max-width:680px){
+  section{padding:56px 0}
+  .grid, .plans{grid-template-columns:1fr}
+  .panel{padding:26px 22px}
+  /* Üçlü diziliş dar ekranda tek telefona iner; üst üste binme okunmaz olur. */
+  .stage{margin-top:40px}
+  .stage .side{display:none}
+  .stage .phone{width:250px}
+}

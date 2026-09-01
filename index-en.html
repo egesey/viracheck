@@ -6,149 +6,82 @@
 <title>ViraCheck — Your boating companion</title>
 <meta name="description" content="Pre-departure checklists, wind and sea state, nearby coves and a logbook. No account, no server — everything stays on your device.">
 <link rel="canonical" href="https://egesey.github.io/viracheck/index-en.html">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="theme-color" content="#0A1420">
 <meta property="og:title" content="ViraCheck — Your boating companion">
 <meta property="og:description" content="Is everything ready before you cast off? Checklists, marine weather, coves and a logbook.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://egesey.github.io/viracheck/index-en.html">
-<style>
-  :root{
-    --bg:#ffffff; --fg:#12202e; --muted:#5a6b7c; --line:#e3e9ef;
-    --accent:#0f9c92; --card:#f6f9fb; --shot:#dfe8ef;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{ --bg:#0A1420; --fg:#e8eef4; --muted:#93a4b5; --line:#1e2c3b;
-           --accent:#2ED3C6; --card:#101d2b; --shot:#0d1826; }
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0; background:var(--bg); color:var(--fg);
-    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    -webkit-text-size-adjust:100%;
-  }
-  .wrap{max-width:960px; margin:0 auto; padding:0 22px}
-  a{color:var(--accent); overflow-wrap:anywhere}
-
-  header{padding:26px 0; display:flex; align-items:center; justify-content:space-between; gap:16px}
-  .brand{display:flex; align-items:center; gap:10px}
-  .dot{width:11px;height:11px;border-radius:50%;background:var(--accent);flex:none}
-  .brand span{font-weight:700; letter-spacing:.02em}
-  header nav{font-size:.9rem}
-
-  .hero{padding:44px 0 10px; text-align:center}
-  h1{font-size:2.5rem; line-height:1.15; margin:0 0 16px; letter-spacing:-.02em}
-  .lead{font-size:1.15rem; color:var(--muted); margin:0 auto 26px; max-width:620px}
-  .badge{
-    display:inline-flex; align-items:center; gap:9px;
-    background:var(--card); border:1px solid var(--line); border-radius:999px;
-    padding:9px 18px; font-size:.92rem; color:var(--muted);
-  }
-  .badge b{color:var(--fg); font-weight:600}
-
-  .shots{
-    display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
-    margin:46px 0 8px;
-  }
-  .shot{margin:0; text-align:center}
-  .shot img{
-    width:100%; height:auto; display:block;
-    border-radius:18px; border:1px solid var(--line); background:var(--shot);
-  }
-  .shot figcaption{margin-top:11px; font-size:.85rem; color:var(--muted)}
-  @media (max-width:640px){
-    .shots{grid-template-columns:1fr; max-width:320px; margin-inline:auto}
-    h1{font-size:1.9rem}
-    .lead{font-size:1.05rem}
-  }
-
-  section{padding:54px 0; border-top:1px solid var(--line)}
-  section:first-of-type{border-top:none}
-  h2{font-size:1.45rem; margin:0 0 10px; letter-spacing:-.01em}
-  .sub{color:var(--muted); margin:0 0 28px; max-width:640px}
-
-  .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
-  @media (max-width:640px){ .grid{grid-template-columns:1fr} }
-  .card{
-    background:var(--card); border:1px solid var(--line);
-    border-radius:14px; padding:20px 22px;
-  }
-  .card h3{margin:0 0 7px; font-size:1.02rem}
-  .card p{margin:0; color:var(--muted); font-size:.95rem}
-
-  .note{
-    background:var(--card); border:1px solid var(--line);
-    border-radius:14px; padding:22px 24px;
-  }
-  .note ul{margin:12px 0 0; padding-left:20px; color:var(--muted)}
-  .note li{margin-bottom:7px}
-  .note li:last-child{margin-bottom:0}
-
-  footer{
-    border-top:1px solid var(--line); margin-top:20px;
-    padding:30px 0 60px; color:var(--muted); font-size:.9rem;
-  }
-  footer p{margin:0 0 8px}
-  .fine{font-size:.82rem; opacity:.85}
-</style>
+<meta property="og:image" content="https://egesey.github.io/viracheck/icon.png">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<div class="wrap">
-
-<header>
-  <div class="brand"><span class="dot"></span><span>ViraCheck</span></div>
-  <nav><a href="index.html">Türkçe →</a></nav>
-</header>
 
 <div class="hero">
-  <h1>Is everything ready<br>before you cast off?</h1>
-  <p class="lead">
-    Pre-departure checklists, wind and sea state, nearby coves and a logbook —
-    in one app. No sign-up, no server to register with.
-  </p>
-  <p class="badge"><b>Coming soon to the App Store</b> · iPhone and iPad</p>
+  <div class="wrap">
+    <nav class="nav">
+      <span class="brand"><img src="icon.png" alt=""> ViraCheck</span>
+      <a href="index.html">Türkçe →</a>
+    </nav>
+
+    <div class="hero-inner">
+      <img class="mark" src="icon.png" alt="ViraCheck app icon" width="82" height="82">
+      <h1>Is everything ready<br>before you cast off?</h1>
+      <p class="lead">
+        Pre-departure checklists, wind and sea state, nearby coves and a
+        logbook — in one app. No sign-up, no server to register with.
+      </p>
+      <p class="pill"><span class="dot"></span><b>Coming soon to the App Store</b> · iPhone and iPad</p>
+
+      <div class="stage">
+        <div class="phone side left">
+          <img src="screens/koylar.png" alt="Coves screen listing nearby coves and beaches with distances" width="720" height="1565">
+        </div>
+        <div class="phone center">
+          <img src="screens/hava.png" alt="Weather screen with the wind dial, Beaufort force and sea state" width="720" height="1565">
+        </div>
+        <div class="phone side right">
+          <img src="screens/kontrol.png" alt="Checks screen showing trip readiness and checklists" width="720" height="1565">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="shots">
-  <figure class="shot">
-    <img src="screens/kontrol.png" alt="Checks tab showing trip readiness, current conditions and checklists" width="720" height="1565" loading="lazy">
-    <figcaption>Pre-departure checks</figcaption>
-  </figure>
-  <figure class="shot">
-    <img src="screens/hava.png" alt="Weather tab showing the wind dial, Beaufort force, gusts and sea state" width="720" height="1565" loading="lazy">
-    <figcaption>Wind and sea state</figcaption>
-  </figure>
-  <figure class="shot">
-    <img src="screens/koylar.png" alt="Coves tab listing nearby coves and beaches with distances" width="720" height="1565" loading="lazy">
-    <figcaption>Nearby coves</figcaption>
-  </figure>
-</div>
+<div class="wrap">
 
-<section>
-  <h2>What it does</h2>
+<section id="features">
+  <p class="eyebrow">What it does</p>
+  <h2>Everything you repeat before every trip, in one place</h2>
   <p class="sub">
-    ViraCheck gathers the things every skipper repeats on every trip — from
-    getting ready to writing the passage down.
+    From getting ready to writing the passage down — the things every skipper
+    does again on every single outing.
   </p>
 
   <div class="grid">
-    <div class="card">
-      <h3>Pre-departure checklists</h3>
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <h3>Pre-departure checks</h3>
       <p>
-        Start with ready-made lists: before you cast off, safety equipment,
-        engine and fuel. Trip readiness rises as you tick items off, so nothing
-        is quietly skipped.
+        Start with ready-made lists: cast-off checks, safety equipment, engine
+        and fuel. Readiness rises as you tick items off, so nothing is quietly
+        skipped.
       </p>
     </div>
 
-    <div class="card">
-      <h3>Wind, waves and sea state</h3>
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M9.6 4.6A2 2 0 1 1 11 8H2m8.6 11.4A2 2 0 1 0 12 16H2m10.6-11.4A2 2 0 1 1 14 8h8"/></svg></div>
+      <h3>Wind, waves and sea</h3>
       <p>
         Wind direction and speed for your position, gusts, Beaufort force, wave
-        height and period, sea temperature and pressure — with an hourly wind
-        strip and a daily summary.
+        height and period, sea temperature and pressure — with an hourly strip
+        and a daily summary.
       </p>
     </div>
 
-    <div class="card">
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M22 11.1A10 10 0 1 1 12.9 2"/><path d="m9 11 3 3L22 4"/></svg></div>
       <h3>Good to go, or not?</h3>
       <p>
         A judgement instead of a raw number: wind and gusts are read together
@@ -156,95 +89,128 @@
       </p>
     </div>
 
-    <div class="card">
-      <h3>Nearby coves and routes</h3>
-      <p>
-        Coves and beaches around you, listed with their distance in nautical
-        miles. Pick a few and the app orders them nearest-first and draws the
-        total distance on the map.
-      </p>
-    </div>
-
-    <div class="card">
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M2 20h20M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></div>
       <h3>Logbook</h3>
       <p>
         Record every passage: departure and arrival ports, times, distance,
-        engine hours, fuel, crew and notes. Export the whole logbook as a PDF
-        and share it whenever you need to.
+        engine hours, fuel, crew and notes. Export the logbook as a PDF and
+        share it.
       </p>
     </div>
 
-    <div class="card">
-      <h3>Boat details and documents</h3>
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 18s2-1 4.5-1 4 2 6.5 2 4.5-1 4.5-1"/><path d="M5 14V6a1 1 0 0 1 1-1h8l4 5v4"/><path d="M9 5V3h4v2"/></svg></div>
+      <h3>Boat and documents</h3>
       <p>
-        Boat name, type, length, home port, call sign and MMSI in one place.
-        Add expiry dates for insurance and registration, and get a reminder
-        before they run out.
+        Boat name, type, length, home port, call sign and MMSI in one place. Add
+        expiry dates for insurance and registration and get a reminder before
+        they run out.
+      </p>
+    </div>
+
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19A10 10 0 0 1 5 5"/></svg></div>
+      <h3>Good-day alerts</h3>
+      <p>
+        Get a notification at the hour you choose, based on tomorrow's wind.
+        Notifications are scheduled on your device; no data goes to any server.
       </p>
     </div>
   </div>
 </section>
 
-<section>
-  <h2>Ready when it matters</h2>
+<section id="coves">
+  <div class="split">
+    <div>
+      <p class="eyebrow">Coves and routes</p>
+      <h2>Plan where you are heading<br>without leaving the app</h2>
+      <p class="sub" style="margin-bottom:0">
+        Coves and beaches around you, listed with their distance in nautical
+        miles. Pick a few — the app orders them nearest-first, draws the legs
+        and gives you the total distance.
+      </p>
+      <ul class="checks">
+        <li><strong>Real data:</strong> coves and beaches come from OpenStreetMap</li>
+        <li><strong>Nautical miles:</strong> distances in the skipper's own unit</li>
+        <li><strong>In-app map:</strong> it never throws you into another app</li>
+        <li><strong>An honest warning:</strong> legs are straight lines; land and shallows are the skipper's call</li>
+      </ul>
+    </div>
+    <div class="phone">
+      <img src="screens/rota.png" alt="Route screen showing the drawn route between selected coves and the total distance" width="720" height="1565" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="emergency">
+  <p class="eyebrow">Emergency</p>
+  <h2>Ready when it matters most</h2>
   <p class="sub">
-    Finding the right words in a crisis is hard. The ViraCheck distress screen
-    prepares a MAYDAY call already filled in with your boat's details.
+    Finding the right words in a crisis is hard. The distress screen prepares a
+    MAYDAY call already filled in with your boat's details.
   </p>
-  <div class="note">
-    <ul>
-      <li>A MAYDAY script with your boat name, MMSI and position in place — you only have to read it</li>
-      <li>One-tap calls to the coastguard (158) and emergency services (112)</li>
-      <li>VHF channel 16 reminder and when to use PAN-PAN instead</li>
-      <li>Man-overboard steps, in order</li>
+  <div class="panel alert">
+    <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg></div>
+    <ul class="checks" style="margin-top:0">
+      <li>A <strong>MAYDAY script</strong> with your boat name, MMSI and position already in place — you only have to read it</li>
+      <li>One-tap calls to the <strong>coastguard (158)</strong> and <strong>emergency services (112)</strong></li>
+      <li><strong>VHF channel 16</strong> reminder and when to use PAN-PAN instead</li>
+      <li><strong>Man-overboard</strong> steps, in order</li>
     </ul>
   </div>
 </section>
 
-<section>
+<section id="privacy">
+  <p class="eyebrow">Privacy</p>
   <h2>No account. No server.</h2>
   <p class="sub">
     You never sign up for ViraCheck, because there is nothing to sign up to.
   </p>
-  <div class="note">
-    <ul>
-      <li>Your checklists, logbook and boat details are stored only on your phone</li>
-      <li>We run no servers of our own — we do not collect, store or sell your data</li>
-      <li>No ad networks, no analytics, no user tracking</li>
-      <li>Your location is used only while a forecast or cove lookup is being made</li>
+  <div class="panel">
+    <ul class="checks" style="margin-top:0">
+      <li>Your checklists, logbook and boat details are stored <strong>only on your phone</strong></li>
+      <li>We run no servers of our own — we <strong>do not collect, store or sell</strong> your data</li>
+      <li><strong>No ad networks, no analytics, no user tracking</strong></li>
+      <li>Your location is used only while a <strong>forecast or cove lookup</strong> is being made</li>
     </ul>
   </div>
 </section>
 
-<section>
-  <h2>Free and Pro</h2>
-  <p class="sub">
-    The whole app is usable for free. Pro lifts the limits.
-  </p>
-  <div class="grid">
-    <div class="card">
+<section id="pricing">
+  <p class="eyebrow">Pricing</p>
+  <h2>Use it free, upgrade if you want to</h2>
+  <p class="sub">The whole app is usable for free. Pro only lifts the limits.</p>
+  <div class="plans">
+    <div class="plan">
       <h3>Free</h3>
-      <p>
-        Checklists, current weather and sea state, the go/no-go call, the
-        distress screen and the logbook — all usable, within sensible limits.
-      </p>
+      <ul>
+        <li>Pre-departure checklists</li>
+        <li>Current weather and sea state</li>
+        <li>The go/no-go call</li>
+        <li>Distress screen and MAYDAY script</li>
+        <li>Logbook and PDF export</li>
+      </ul>
     </div>
-    <div class="card">
-      <h3>Pro</h3>
-      <p>
-        The 7-day wind forecast, the full 24-hour hourly strip, unlimited
-        logbook entries, every ready-made checklist and all nearby coves.
-        Monthly or yearly.
-      </p>
+    <div class="plan pro">
+      <span class="tag">Pro</span>
+      <h3>Lift the limits</h3>
+      <ul>
+        <li>7-day wind forecast</li>
+        <li>Full 24-hour hourly strip</li>
+        <li>Unlimited logbook entries</li>
+        <li>Every ready-made checklist</li>
+        <li>All nearby coves</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>
-    <a href="privacy-en.html">Privacy Policy</a> ·
-    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a> ·
-    <a href="mailto:egeseymen@icloud.com">Contact</a> ·
+  <p class="links">
+    <a href="privacy-en.html">Privacy Policy</a>
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
+    <a href="mailto:egeseymen@icloud.com">Contact</a>
     <a href="index.html">Türkçe</a>
   </p>
   <p class="fine">

@@ -6,153 +6,83 @@
 <title>ViraCheck — Tekne seyir asistanı</title>
 <meta name="description" content="Kalkış öncesi kontrol listeleri, rüzgâr ve deniz durumu, yakındaki koylar ve seyir defteri. Hesap yok, sunucu yok — her şey cihazınızda kalır.">
 <link rel="canonical" href="https://egesey.github.io/viracheck/">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="theme-color" content="#0A1420">
 <meta property="og:title" content="ViraCheck — Tekne seyir asistanı">
 <meta property="og:description" content="Denize açılmadan önce her şey yerinde mi? Kontrol listeleri, hava ve deniz durumu, koylar ve seyir defteri.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://egesey.github.io/viracheck/">
-<style>
-  :root{
-    --bg:#ffffff; --fg:#12202e; --muted:#5a6b7c; --line:#e3e9ef;
-    --accent:#0f9c92; --card:#f6f9fb; --shot:#dfe8ef;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{ --bg:#0A1420; --fg:#e8eef4; --muted:#93a4b5; --line:#1e2c3b;
-           --accent:#2ED3C6; --card:#101d2b; --shot:#0d1826; }
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0; background:var(--bg); color:var(--fg);
-    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    -webkit-text-size-adjust:100%;
-  }
-  .wrap{max-width:960px; margin:0 auto; padding:0 22px}
-  a{color:var(--accent); overflow-wrap:anywhere}
-
-  /* ---------------------------------------------------------- başlık */
-  header{padding:26px 0; display:flex; align-items:center; justify-content:space-between; gap:16px}
-  .brand{display:flex; align-items:center; gap:10px}
-  .dot{width:11px;height:11px;border-radius:50%;background:var(--accent);flex:none}
-  .brand span{font-weight:700; letter-spacing:.02em}
-  header nav{font-size:.9rem}
-
-  /* ------------------------------------------------------------ hero */
-  .hero{padding:44px 0 10px; text-align:center}
-  h1{font-size:2.5rem; line-height:1.15; margin:0 0 16px; letter-spacing:-.02em}
-  .lead{font-size:1.15rem; color:var(--muted); margin:0 auto 26px; max-width:620px}
-  .badge{
-    display:inline-flex; align-items:center; gap:9px;
-    background:var(--card); border:1px solid var(--line); border-radius:999px;
-    padding:9px 18px; font-size:.92rem; color:var(--muted);
-  }
-  .badge b{color:var(--fg); font-weight:600}
-
-  /* ------------------------------------------------------- görseller */
-  .shots{
-    display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
-    margin:46px 0 8px;
-  }
-  .shot{margin:0; text-align:center}
-  .shot img{
-    width:100%; height:auto; display:block;
-    border-radius:18px; border:1px solid var(--line); background:var(--shot);
-  }
-  .shot figcaption{margin-top:11px; font-size:.85rem; color:var(--muted)}
-  @media (max-width:640px){
-    .shots{grid-template-columns:1fr; max-width:320px; margin-inline:auto}
-    h1{font-size:1.9rem}
-    .lead{font-size:1.05rem}
-  }
-
-  /* -------------------------------------------------------- bölümler */
-  section{padding:54px 0; border-top:1px solid var(--line)}
-  section:first-of-type{border-top:none}
-  h2{font-size:1.45rem; margin:0 0 10px; letter-spacing:-.01em}
-  .sub{color:var(--muted); margin:0 0 28px; max-width:640px}
-
-  .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
-  @media (max-width:640px){ .grid{grid-template-columns:1fr} }
-  .card{
-    background:var(--card); border:1px solid var(--line);
-    border-radius:14px; padding:20px 22px;
-  }
-  .card h3{margin:0 0 7px; font-size:1.02rem}
-  .card p{margin:0; color:var(--muted); font-size:.95rem}
-
-  .note{
-    background:var(--card); border:1px solid var(--line);
-    border-radius:14px; padding:22px 24px;
-  }
-  .note ul{margin:12px 0 0; padding-left:20px; color:var(--muted)}
-  .note li{margin-bottom:7px}
-  .note li:last-child{margin-bottom:0}
-
-  footer{
-    border-top:1px solid var(--line); margin-top:20px;
-    padding:30px 0 60px; color:var(--muted); font-size:.9rem;
-  }
-  footer p{margin:0 0 8px}
-  .fine{font-size:.82rem; opacity:.85}
-</style>
+<meta property="og:image" content="https://egesey.github.io/viracheck/icon.png">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<div class="wrap">
-
-<header>
-  <div class="brand"><span class="dot"></span><span>ViraCheck</span></div>
-  <nav><a href="index-en.html">In English →</a></nav>
-</header>
 
 <div class="hero">
-  <h1>Denize açılmadan önce,<br>her şey yerinde mi?</h1>
-  <p class="lead">
-    Kalkış öncesi kontrol listeleri, rüzgâr ve deniz durumu, yakındaki koylar ve
-    seyir defteri — tek uygulamada. Hesap açmadan, hiçbir sunucuya kaydolmadan.
-  </p>
-  <p class="badge"><b>App Store'da yakında</b> · iPhone ve iPad</p>
+  <div class="wrap">
+    <nav class="nav">
+      <span class="brand"><img src="icon.png" alt=""> ViraCheck</span>
+      <a href="index-en.html">In English →</a>
+    </nav>
+
+    <div class="hero-inner">
+      <img class="mark" src="icon.png" alt="ViraCheck uygulama simgesi" width="82" height="82">
+      <h1>Denize açılmadan önce,<br>her şey yerinde mi?</h1>
+      <p class="lead">
+        Kalkış öncesi kontrol listeleri, rüzgâr ve deniz durumu, yakındaki
+        koylar ve seyir defteri — tek uygulamada. Hesap açmadan, hiçbir
+        sunucuya kaydolmadan.
+      </p>
+      <p class="pill"><span class="dot"></span><b>App Store'da yakında</b> · iPhone ve iPad</p>
+
+      <div class="stage">
+        <div class="phone side left">
+          <img src="screens/koylar.png" alt="Koylar ekranı: yakındaki koy ve plajlar, mesafeleriyle" width="720" height="1565">
+        </div>
+        <div class="phone center">
+          <img src="screens/hava.png" alt="Hava ekranı: rüzgâr gülü, Beaufort kuvveti ve deniz durumu" width="720" height="1565">
+        </div>
+        <div class="phone side right">
+          <img src="screens/kontrol.png" alt="Kontroller ekranı: sefere hazırlık yüzdesi ve kontrol listeleri" width="720" height="1565">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="shots">
-  <figure class="shot">
-    <img src="screens/kontrol.png" alt="Kontroller sekmesi: sefere hazırlık yüzdesi, anlık rüzgâr durumu ve kontrol listeleri" width="720" height="1565" loading="lazy">
-    <figcaption>Kalkış öncesi kontrol</figcaption>
-  </figure>
-  <figure class="shot">
-    <img src="screens/hava.png" alt="Hava sekmesi: rüzgâr gülü, Beaufort kuvveti, hamle hızı ve deniz durumu" width="720" height="1565" loading="lazy">
-    <figcaption>Rüzgâr ve deniz durumu</figcaption>
-  </figure>
-  <figure class="shot">
-    <img src="screens/koylar.png" alt="Koylar sekmesi: yakındaki koy ve plajlar, mesafeleriyle birlikte" width="720" height="1565" loading="lazy">
-    <figcaption>Yakındaki koylar</figcaption>
-  </figure>
-</div>
+<div class="wrap">
 
-<section>
-  <h2>Ne yapar?</h2>
+<section id="ozellikler">
+  <p class="eyebrow">Ne yapar</p>
+  <h2>Her seferde tekrarlanan işler, tek yerde</h2>
   <p class="sub">
-    ViraCheck, tekneyle denize çıkan herkesin her seferde tekrarladığı işleri
-    tek yerde toplar — hazırlıktan seyir kaydına kadar.
+    Hazırlıktan seyir kaydına kadar; tekneyle denize çıkan herkesin her çıkışta
+    yeniden yaptığı şeyler.
   </p>
 
   <div class="grid">
-    <div class="card">
-      <h3>Kalkış öncesi kontrol listeleri</h3>
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <h3>Kalkış öncesi kontroller</h3>
       <p>
-        Hazır listelerle yola çıkın: kalkış öncesi kontroller, güvenlik
-        ekipmanı, motor ve yakıt. İşaretledikçe sefere hazırlık yüzdeniz artar,
-        eksik kalan madde gözden kaçmaz.
+        Hazır listelerle yola çıkın: kalkış kontrolleri, güvenlik ekipmanı,
+        motor ve yakıt. İşaretledikçe hazırlık yüzdeniz artar, eksik madde
+        gözden kaçmaz.
       </p>
     </div>
 
-    <div class="card">
-      <h3>Rüzgâr, dalga ve deniz durumu</h3>
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M9.6 4.6A2 2 0 1 1 11 8H2m8.6 11.4A2 2 0 1 0 12 16H2m10.6-11.4A2 2 0 1 1 14 8h8"/></svg></div>
+      <h3>Rüzgâr, dalga ve deniz</h3>
       <p>
-        Bulunduğunuz mevkiye göre rüzgâr yönü ve hızı, hamle, Beaufort kuvveti,
-        dalga yüksekliği ve periyodu, deniz suyu sıcaklığı ve basınç. Saatlik
-        rüzgâr şeridi ve günlük özet ile.
+        Mevkinize göre rüzgâr yönü ve hızı, hamle, Beaufort kuvveti, dalga
+        yüksekliği ve periyodu, deniz suyu sıcaklığı, basınç. Saatlik şerit ve
+        günlük özet ile.
       </p>
     </div>
 
-    <div class="card">
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M22 11.1A10 10 0 1 1 12.9 2"/><path d="m9 11 3 3L22 4"/></svg></div>
       <h3>Seyre uygun mu?</h3>
       <p>
         Ham sayı yerine yorum: rüzgâr ve hamle birlikte değerlendirilip
@@ -161,96 +91,127 @@
       </p>
     </div>
 
-    <div class="card">
-      <h3>Yakındaki koylar ve rota</h3>
-      <p>
-        Çevrenizdeki koy ve plajlar, mevkinize uzaklıklarıyla deniz mili
-        cinsinden listelenir. Birkaçını seçin, uygulama en yakından başlayarak
-        sıralayıp toplam mesafeyi haritada gösterir.
-      </p>
-    </div>
-
-    <div class="card">
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M2 20h20M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></div>
       <h3>Seyir defteri</h3>
       <p>
         Her seferi kaydedin: kalkış ve varış limanı, saatler, mesafe, motor
-        saati, yakıt, mürettebat ve notlar. Defterinizi istediğiniz zaman PDF
-        olarak dışa aktarıp paylaşın.
+        saati, yakıt, mürettebat ve notlar. Defteri PDF olarak dışa aktarıp
+        paylaşın.
       </p>
     </div>
 
-    <div class="card">
-      <h3>Tekne bilgileri ve belgeler</h3>
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 18s2-1 4.5-1 4 2 6.5 2 4.5-1 4.5-1"/><path d="M5 14V6a1 1 0 0 1 1-1h8l4 5v4"/><path d="M9 5V3h4v2"/></svg></div>
+      <h3>Tekne ve belgeler</h3>
       <p>
         Tekne adı, tipi, boyu, bağlama limanı, çağrı işareti ve MMSI tek yerde.
-        Sigorta ve ruhsat gibi belgelerin bitiş tarihlerini girin, süresi
-        dolmadan uyarı alın.
+        Sigorta ve ruhsat bitiş tarihlerini girin, süresi dolmadan uyarı alın.
+      </p>
+    </div>
+
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19A10 10 0 0 1 5 5"/></svg></div>
+      <h3>Uygun gün bildirimi</h3>
+      <p>
+        Seçtiğiniz saatte, ertesi günün rüzgârına göre bildirim alın. Bildirimler
+        cihazınızda planlanır; hiçbir sunucuya veri gitmez.
       </p>
     </div>
   </div>
 </section>
 
-<section>
-  <h2>Acil durumda hazır</h2>
+<section id="koylar">
+  <div class="split">
+    <div>
+      <p class="eyebrow">Koylar ve rota</p>
+      <h2>Nereye gideceğinizi<br>uygulamadan çıkmadan planlayın</h2>
+      <p class="sub" style="margin-bottom:0">
+        Çevrenizdeki koy ve plajlar, mevkinize uzaklıklarıyla deniz mili
+        cinsinden listelenir. Birkaçını seçin — uygulama en yakından başlayarak
+        sıralar, bacakları çizer ve toplam mesafeyi verir.
+      </p>
+      <ul class="checks">
+        <li><strong>Gerçek veri:</strong> koy ve plajlar OpenStreetMap'ten gelir</li>
+        <li><strong>Deniz mili:</strong> mesafeler denizcinin birimiyle</li>
+        <li><strong>Uygulama içi harita:</strong> başka uygulamaya atmaz</li>
+        <li><strong>Dürüst uyarı:</strong> bacaklar düz hattır; kara ve sığlık kontrolü kaptanındır</li>
+      </ul>
+    </div>
+    <div class="phone">
+      <img src="screens/rota.png" alt="Rota ekranı: seçilen koylar arasında çizilmiş rota ve toplam mesafe" width="720" height="1565" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="imdat">
+  <p class="eyebrow">Acil durum</p>
+  <h2>En kötü anda hazır</h2>
   <p class="sub">
-    Panik anında doğru cümleyi kurmak zordur. ViraCheck imdat ekranı, tekne
+    Panik anında doğru cümleyi kurmak zordur. İmdat ekranı, tekne
     bilgilerinizle önceden doldurulmuş bir MAYDAY metni hazırlar.
   </p>
-  <div class="note">
-    <ul>
-      <li>Tekne adınız, MMSI'niz ve mevkiiniz yerleştirilmiş MAYDAY metni — okumanız yeterli</li>
-      <li>Sahil Güvenlik (158) ve acil çağrı (112) için tek dokunuşla arama</li>
-      <li>VHF kanal 16 hatırlatması ve PAN-PAN kullanımı</li>
-      <li>Denize adam düştüğünde izlenecek adımlar, sırayla</li>
+  <div class="panel alert">
+    <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg></div>
+    <ul class="checks" style="margin-top:0">
+      <li>Tekne adınız, MMSI'niz ve mevkiiniz yerleştirilmiş <strong>MAYDAY metni</strong> — okumanız yeterli</li>
+      <li><strong>Sahil Güvenlik (158)</strong> ve <strong>acil çağrı (112)</strong> için tek dokunuşla arama</li>
+      <li><strong>VHF kanal 16</strong> hatırlatması ve PAN-PAN'ın ne zaman kullanılacağı</li>
+      <li><strong>Denize adam düştüğünde</strong> izlenecek adımlar, sırayla</li>
     </ul>
   </div>
 </section>
 
-<section>
+<section id="gizlilik">
+  <p class="eyebrow">Gizlilik</p>
   <h2>Hesap yok. Sunucu yok.</h2>
   <p class="sub">
     ViraCheck'te kayıt olmazsınız, çünkü kaydolacak bir yer yok.
   </p>
-  <div class="note">
-    <ul>
-      <li>Kontrol listeleriniz, seyir defteriniz ve tekne bilgileriniz yalnızca telefonunuzda saklanır</li>
-      <li>Bize ait bir sunucu yok — verilerinizi toplamıyor, saklamıyor veya satmıyoruz</li>
-      <li>Reklam ağı, analiz aracı veya kullanıcı takibi kullanılmıyor</li>
-      <li>Konumunuz yalnızca tahmin ve koy sorgusu yapılırken kullanılır</li>
+  <div class="panel">
+    <ul class="checks" style="margin-top:0">
+      <li>Kontrol listeleriniz, seyir defteriniz ve tekne bilgileriniz <strong>yalnızca telefonunuzda</strong> saklanır</li>
+      <li>Bize ait bir sunucu yok — verilerinizi <strong>toplamıyor, saklamıyor veya satmıyoruz</strong></li>
+      <li><strong>Reklam ağı, analiz aracı veya kullanıcı takibi</strong> kullanılmıyor</li>
+      <li>Konumunuz yalnızca <strong>tahmin ve koy sorgusu</strong> yapılırken kullanılır</li>
     </ul>
   </div>
 </section>
 
-<section>
-  <h2>Ücretsiz ve Pro</h2>
-  <p class="sub">
-    Uygulamanın tamamı ücretsiz kullanılabilir. Pro, sınırları kaldırır.
-  </p>
-  <div class="grid">
-    <div class="card">
+<section id="fiyat">
+  <p class="eyebrow">Fiyatlandırma</p>
+  <h2>Ücretsiz kullanın, isterseniz büyütün</h2>
+  <p class="sub">Uygulamanın tamamı ücretsiz kullanılabilir. Pro yalnızca sınırları kaldırır.</p>
+  <div class="plans">
+    <div class="plan">
       <h3>Ücretsiz</h3>
-      <p>
-        Kontrol listeleri, anlık hava ve deniz durumu, seyre uygunluk tavsiyesi,
-        imdat ekranı ve seyir defteri — hepsi kullanılabilir durumda,
-        makul sınırlarla.
-      </p>
+      <ul>
+        <li>Kalkış öncesi kontrol listeleri</li>
+        <li>Anlık hava ve deniz durumu</li>
+        <li>Seyre uygunluk tavsiyesi</li>
+        <li>İmdat ekranı ve MAYDAY metni</li>
+        <li>Seyir defteri ve PDF dışa aktarma</li>
+      </ul>
     </div>
-    <div class="card">
-      <h3>Pro</h3>
-      <p>
-        7 günlük rüzgâr tahmini, 24 saatlik saatlik şerit, sınırsız sefer kaydı,
-        tüm hazır kontrol listeleri ve yakındaki koyların tamamı. Aylık veya
-        yıllık.
-      </p>
+    <div class="plan pro">
+      <span class="tag">Pro</span>
+      <h3>Sınırlar kalksın</h3>
+      <ul>
+        <li>7 günlük rüzgâr tahmini</li>
+        <li>24 saatlik saatlik şerit</li>
+        <li>Sınırsız sefer kaydı</li>
+        <li>Tüm hazır kontrol listeleri</li>
+        <li>Yakındaki koyların tamamı</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>
-    <a href="privacy-tr.html">Gizlilik Politikası</a> ·
-    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Kullanım Koşulları</a> ·
-    <a href="mailto:egeseymen@icloud.com">İletişim</a> ·
+  <p class="links">
+    <a href="privacy-tr.html">Gizlilik Politikası</a>
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Kullanım Koşulları</a>
+    <a href="mailto:egeseymen@icloud.com">İletişim</a>
     <a href="index-en.html">In English</a>
   </p>
   <p class="fine">
