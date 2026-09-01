@@ -189,8 +189,24 @@ footer .links{margin:0 0 18px; display:flex; flex-wrap:wrap; gap:8px 20px}
   section{padding:56px 0}
   .grid, .plans{grid-template-columns:1fr}
   .panel{padding:26px 22px}
-  /* Üçlü diziliş dar ekranda tek telefona iner; üst üste binme okunmaz olur. */
+
+  /* Dar ekranda da üç telefon birden görünsün. Kartlar küçülüp birbirine
+   * sokuluyor: `translateX` yalnızca görüntüyü kaydırır, yerleşim genişliğini
+   * değiştirmez — bu yüzden satırın taşmaması için negatif kenar boşluğu
+   * gerekiyor. Toplam genişlik 336px; 384px ve üzeri ekranlara sığar. */
   .stage{margin-top:40px}
-  .stage .side{display:none}
-  .stage .phone{width:250px}
+  .stage .phone{width:168px; padding:5px; border-radius:24px}
+  .stage .phone img{border-radius:20px}
+  .stage .side{width:140px}
+  .stage .left{margin-right:-56px; transform:translateY(18px) rotate(-4deg)}
+  .stage .right{margin-left:-56px; transform:translateY(18px) rotate(4deg)}
+  .stage::after{height:110px}
+}
+
+/* iPhone SE / mini genişliği: bir kademe daha küçült, toplam 300px. */
+@media (max-width:400px){
+  .stage .phone{width:150px}
+  .stage .side{width:125px}
+  .stage .left{margin-right:-50px}
+  .stage .right{margin-left:-50px}
 }
