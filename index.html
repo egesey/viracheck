@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://egesey.github.io/viracheck/">
 <meta property="og:image" content="https://egesey.github.io/viracheck/icon.png">
-<link rel="stylesheet" href="site.css?v=5">
+<link rel="stylesheet" href="site.css?v=6">
 </head>
 <body>
 
@@ -36,7 +36,13 @@
         kaydolmadan.
       </p>
       <p class="pill"><span class="dot"></span><b>App Store'da yayında</b> · iPhone ve iPad</p>
-      <p><a class="store-btn" href="https://apps.apple.com/app/id6806044930">App Store'da indir</a></p>
+      <!--
+        Tam kanonik adres (ülke + ad + kimlik) kullanılıyor. Kısa "/app/id…"
+        biçimi macOS'ta App Store uygulamasına devredilince çözülemeyip hata
+        veriyordu; ViraCheck iPhone ve iPad uygulaması, Mac'te listelenmiyor.
+      -->
+      <p><a class="store-btn" href="https://apps.apple.com/tr/app/viracheck/id6806044930" target="_blank" rel="noopener">App Store'da indir</a></p>
+      <p class="store-not">iPhone ve iPad için · iOS 16.4 ve üzeri</p>
 
       <div class="stage">
         <div class="phone side left">

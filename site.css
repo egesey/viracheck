@@ -85,6 +85,10 @@ a:hover{text-decoration:underline}
   box-shadow:0 16px 34px -18px rgba(9,112,127,.75);
 }
 .store-btn:hover{filter:brightness(1.08); text-decoration:none}
+/* Masaüstünden bakan ziyaretçi için: bağlantı App Store uygulamasına
+ * devrediliyor ve ViraCheck Mac'te listelenmiyor; hangi cihaz olduğunu
+ * baştan söylemek hata ekranından iyi. */
+.store-not{margin:12px 0 0; font-size:.88rem; color:var(--faint)}
 
 .pill .dot{
   width:8px; height:8px; border-radius:50%; background:var(--accent);

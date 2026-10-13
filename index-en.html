@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://egesey.github.io/viracheck/index-en.html">
 <meta property="og:image" content="https://egesey.github.io/viracheck/icon.png">
-<link rel="stylesheet" href="site.css?v=5">
+<link rel="stylesheet" href="site.css?v=6">
 </head>
 <body>
 
@@ -35,7 +35,13 @@
         logbook — in one app. No sign-up, nothing to register with.
       </p>
       <p class="pill"><span class="dot"></span><b>Now on the App Store</b> · iPhone and iPad</p>
-      <p><a class="store-btn" href="https://apps.apple.com/app/id6806044930">Download on the App Store</a></p>
+      <!--
+        Full canonical URL (storefront + slug + id). The short "/app/id…" form
+        failed to resolve when macOS handed it to the App Store app; ViraCheck
+        is an iPhone and iPad app and is not listed on the Mac store.
+      -->
+      <p><a class="store-btn" href="https://apps.apple.com/us/app/viracheck/id6806044930" target="_blank" rel="noopener">Download on the App Store</a></p>
+      <p class="store-not">For iPhone and iPad · iOS 16.4 or later</p>
 
       <div class="stage">
         <div class="phone side left">
