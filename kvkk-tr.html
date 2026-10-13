@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ViraCheck — KVKK Aydınlatma Metni</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<meta name="theme-color" content="#F4F6F8">
+<meta name="robots" content="index,follow">
+<style>
+  /* Palet uygulamanın beyaz temasından (src/theme.ts → lightColors) gelir;
+   * site sistem temasını takip etmez, uygulamanın birincil görünümünü izler. */
+  :root{
+    color-scheme:light;
+    --bg:#F4F6F8; --fg:#0E1C28; --muted:#4F6475; --line:#D5DEE6;
+    --accent:#09707F; --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:40px 22px 80px}
+  header{border-bottom:1px solid var(--line); padding-bottom:22px; margin-bottom:30px}
+  .brand{display:flex; align-items:center; gap:10px; margin-bottom:14px}
+  .dot{width:11px;height:11px;border-radius:50%;background:var(--accent);flex:none}
+  .brand span{font-weight:700; letter-spacing:.02em}
+  h1{font-size:1.75rem; line-height:1.25; margin:0 0 8px}
+  .date{color:var(--muted); font-size:.9rem; margin:0}
+  .lang{margin-top:16px; font-size:.9rem}
+  .lang a{color:var(--accent)}
+  h2{font-size:1.12rem; margin:34px 0 10px; line-height:1.35}
+  p{margin:0 0 14px}
+  ul{margin:0 0 14px; padding-left:22px}
+  li{margin-bottom:7px}
+  a{color:var(--accent); overflow-wrap:anywhere}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; margin:0 0 8px;
+    box-shadow:0 1px 2px rgba(14,28,40,.04), 0 10px 28px -16px rgba(14,28,40,.16)}
+  .card p:last-child, .card ul:last-child{margin-bottom:0}
+  table{width:100%; border-collapse:collapse; margin:0 0 16px; font-size:.95rem}
+  th,td{text-align:left; vertical-align:top; padding:9px 10px; border-bottom:1px solid var(--line)}
+  th{font-weight:600; width:34%}
+  @media (max-width:560px){
+    table, tbody, tr, td, th{display:block; width:auto}
+    th{border-bottom:none; padding-bottom:0}
+    td{padding-top:4px}
+    tr{border-bottom:1px solid var(--line); padding-bottom:8px; display:block; margin-bottom:8px}
+  }
+  footer{margin-top:50px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand"><span class="dot"></span><span>ViraCheck</span></div>
+  <h1>KVKK Aydınlatma Metni</h1>
+  <p class="date">Son güncelleme: 14 Ekim 2026</p>
+  <p class="lang"><a href="index.html">← ViraCheck</a> · <a href="privacy-tr.html">Gizlilik Politikası</a></p>
+</header>
+
+<p>Bu metin, 6698 sayılı <strong>Kişisel Verilerin Korunması Kanunu</strong>'nun (KVKK) 10. maddesi ve
+<em>Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ</em> uyarınca,
+ViraCheck mobil uygulamasını kullanırken hangi kişisel verilerinizin işlendiğini açıklamak için hazırlanmıştır.</p>
+
+<div class="card">
+  <p><strong>Özet</strong></p>
+  <ul>
+    <li>ViraCheck'te <strong>hesap yoktur</strong>; ad, e-posta, telefon gibi kimlik bilgisi istemiyoruz.</li>
+    <li>Kontrol listeleriniz, seyir defteriniz ve tekne bilgileriniz <strong>yalnızca cihazınızda</strong> kalır; bize hiç ulaşmaz.</li>
+    <li>Bize ulaşan tek veri, <strong>açık rızanızla</strong> gönderilen anonim kullanım sayıları ve hizmetin çalışması için gereken konum koordinatlarıdır.</li>
+    <li>Kişisel veri <strong>satmıyoruz</strong>, reklam ağı kullanmıyoruz.</li>
+  </ul>
+</div>
+
+<h2>1. Veri sorumlusunun kimliği</h2>
+<table>
+  <tr><th>Veri sorumlusu</th><td>Ege Seymen (gerçek kişi)</td></tr>
+  <tr><th>Uygulama</th><td>ViraCheck — iOS ve iPadOS</td></tr>
+  <tr><th>İletişim</th><td><a href="mailto:egeseymen@icloud.com">egeseymen@icloud.com</a></td></tr>
+  <tr><th>İnternet sitesi</th><td><a href="https://egesey.github.io/viracheck/">egesey.github.io/viracheck</a></td></tr>
+</table>
+<p>ViraCheck bir şahıs işletmesi tarafından yürütülmektedir. VERBİS'e kayıt yükümlülüğü, Kişisel Verileri Koruma
+Kurulu'nun belirlediği çalışan sayısı ve yıllık mali bilanço eşiklerine bağlıdır; ViraCheck bu eşiklerin altındadır
+ve ana faaliyeti özel nitelikli kişisel veri işlemek değildir.</p>
+
+<h2>2. İşlenen kişisel veriler, amaçları ve hukuki sebepleri</h2>
+<p>Aşağıdaki tabloda, uygulamanın <em>bize ulaşan</em> verileri yer alır. Cihazınızda kalan ve bize hiç iletilmeyen
+içerik (kontrol listeleri, seyir defteri, tekne bilgileri, ayarlar) tarafımızca işlenmediği için tabloda yoktur.</p>
+<table>
+  <tr>
+    <th>Konum verisi<br><span style="font-weight:400;color:var(--muted)">enlem/boylam</span></th>
+    <td>
+      Bulunduğunuz mevkiye göre rüzgâr, dalga ve deniz durumu hesaplamak ve yakındaki koy/plaj listesini üretmek için.<br>
+      <strong>Hukuki sebep:</strong> KVKK m.5/1 — <strong>açık rıza</strong> (iOS konum izni). İzin vermezseniz
+      uygulamanın geri kalanı çalışır, yalnızca hava ve koy özellikleri kapanır.<br>
+      <strong>Saklama:</strong> Tam konumunuz saklanmaz, konum geçmişi tutulmaz. Koy listesini tekrar indirmemek
+      için yaklaşık konumunuz (~1 km çözünürlükte) yalnızca cihazınızda, en fazla 12 bölge olacak şekilde önbelleğe alınır.
+    </td>
+  </tr>
+  <tr>
+    <th>Anonim kullanım sayıları<br><span style="font-weight:400;color:var(--muted)">kurulum kimliği + sayaçlar</span></th>
+    <td>
+      Uygulamanın hangi bölümlerinin kullanıldığını anlamak ve geliştirme önceliklerini belirlemek için.<br>
+      <strong>Hukuki sebep:</strong> KVKK m.5/1 — <strong>açık rıza</strong>. Uygulama bir kez açıkça sorar;
+      onaylamazsanız tek bir istek bile gönderilmez. İzni Tekne → Ayarlar'dan istediğiniz an kapatabilirsiniz.<br>
+      <strong>Kapsam:</strong> Kurulum başına rastgele üretilen bir kimlik; kaç tekne/sefer kaydınız olduğu, toplam
+      deniz mili, tamamlanan liste sayısı, hangi sekmelerin kaç kez açıldığı, kiralama bağlantılarına kaç kez ve
+      hangi bölge kartına dokunulduğu, abonelik ekranı görüntülemeleri, Pro olup olmadığınız, uygulama sürümü,
+      platform, arayüz dili, kurulumun ilk ve son görülme tarihi ve uygulama açıkken dakikada en fazla bir kez
+      yazılan <em>son etkinlik zaman damgası</em>.<br>
+      <strong>Kapsam dışı:</strong> Adınız, e-postanız, konumunuz, seyir defteri içeriğiniz, tekne adınız ve
+      aradığınız yerler <u>hiçbir zaman</u> gönderilmez.
+    </td>
+  </tr>
+  <tr>
+    <th>Abonelik verisi</th>
+    <td>
+      ViraCheck Pro aboneliğinin durumunu doğrulamak ve satın alımları geri yüklemek için.<br>
+      <strong>Hukuki sebep:</strong> KVKK m.5/2-c — <strong>sözleşmenin kurulması veya ifası</strong>.<br>
+      <strong>Kapsam:</strong> Rastgele üretilmiş anonim bir kullanıcı kimliği, satın alınan ürün, tarih ve
+      yenilenme durumu ile cihaz türü/ülke gibi teknik bilgiler. Ödeme bilgileriniz Apple tarafından işlenir,
+      bize hiçbir zaman iletilmez.
+    </td>
+  </tr>
+  <tr>
+    <th>İletişim verisi</th>
+    <td>
+      Yalnızca bize e-posta yazarsanız: ilettiğiniz e-posta adresi ve mesaj içeriği.<br>
+      <strong>Hukuki sebep:</strong> KVKK m.5/2-f — <strong>meşru menfaat</strong> (talebin yanıtlanması).
+    </td>
+  </tr>
+</table>
+
+<h2>3. Kişisel verilerin aktarıldığı taraflar</h2>
+<p>Verileriniz <strong>satılmaz</strong> ve reklam amacıyla paylaşılmaz. Hizmetin çalışması için aşağıdaki
+hizmet sağlayıcılara aktarım yapılır:</p>
+<table>
+  <tr><th>Open-Meteo</th><td>Hava ve deniz tahmini. Yalnızca koordinat ve istenen tahmin alanları iletilir. (Almanya)</td></tr>
+  <tr><th>OpenStreetMap / Overpass API</th><td>Koy ve plaj listesi. Yalnızca koordinat ve arama yarıçapı iletilir. Uygulamaya gömülü bölgelerde hiç istek yapılmaz. (AB)</td></tr>
+  <tr><th>Apple</th><td>Uygulama dağıtımı, abonelik tahsilatı ve koordinatın yer adına çevrilmesi. (ABD/AB)</td></tr>
+  <tr><th>Google — Firebase</th><td>Anonim kullanım sayılarının saklanması. Veritabanı <strong>Avrupa (eur3)</strong> bölgesinde tutulur. Yalnızca açık rıza verdiyseniz.</td></tr>
+  <tr><th>RevenueCat</th><td>Abonelik durumunun doğrulanması. (ABD)</td></tr>
+  <tr><th>Awin ve iş ortağı platformlar</th><td>Kiralama bağlantısına dokunduğunuzda tarayıcı, ortaklık ağının (Awin) alan adı üzerinden iş ortağının sayfasına yönlendirilir. Bu sırada ağ ve iş ortağı kendi çerezlerini yerleştirebilir. Ortaklara sizi tanımlayan bilgi göndermeyiz; yalnızca bağlantının ViraCheck'ten geldiğini belirten ortaklık kimliği taşınır.</td></tr>
+</table>
+<p>Bu sağlayıcıların bir kısmı yurt dışında bulunduğundan, veriler KVKK m.9 kapsamında yurt dışına aktarılmaktadır.
+Aktarım, açık rızanızın bulunduğu hâllerde rızaya; abonelik gibi hâllerde ise sözleşmenin ifası şartına dayanır.</p>
+
+<h2>4. Kişisel veri toplamanın yöntemi</h2>
+<p>Kişisel verileriniz, ViraCheck mobil uygulaması üzerinden <strong>elektronik ortamda ve otomatik yollarla</strong>
+toplanır. Fiziki ortamda veri toplanmaz; çağrı merkezi, form veya kayıt ekranı bulunmamaktadır.</p>
+
+<h2>5. Saklama süresi</h2>
+<ul>
+  <li><strong>Cihazınızdaki içerik:</strong> siz silene veya uygulamayı kaldırana kadar.</li>
+  <li><strong>Anonim kullanım kayıtları:</strong> ölçümü kapattığınızda cihazdaki kimlik silinir; sunucudaki kaydın silinmesini talep edebilirsiniz.</li>
+  <li><strong>Abonelik kayıtları:</strong> Apple ve RevenueCat'in kendi saklama süreleri boyunca.</li>
+  <li><strong>E-posta yazışmaları:</strong> talebin sonuçlanmasından sonra makul süre içinde.</li>
+</ul>
+
+<h2>6. İlgili kişi olarak haklarınız (KVKK m.11)</h2>
+<p>Veri sorumlusuna başvurarak şu haklara sahipsiniz:</p>
+<ul>
+  <li>Kişisel verinizin işlenip işlenmediğini öğrenme,</li>
+  <li>İşlenmişse buna ilişkin bilgi talep etme,</li>
+  <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+  <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme,</li>
+  <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme,</li>
+  <li>KVKK m.7'deki şartlar çerçevesinde silinmesini veya yok edilmesini isteme,</li>
+  <li>Düzeltme, silme ve yok etme işlemlerinin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+  <li>Münhasıran otomatik sistemlerle analiz edilmesi suretiyle aleyhinize bir sonuç çıkmasına itiraz etme,</li>
+  <li>Kanuna aykırı işleme sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme.</li>
+</ul>
+<p>ViraCheck'te profilleme veya münhasıran otomatik karar verme yapılmamaktadır.</p>
+
+<h2>7. Başvuru yolu</h2>
+<p>Haklarınızı kullanmak için <em>Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ</em> uyarınca
+<a href="mailto:egeseymen@icloud.com">egeseymen@icloud.com</a> adresine yazabilirsiniz. Başvurunuzda ad-soyad,
+talebin konusu ve size ulaşabileceğimiz bir adres bulunmalıdır. Talebiniz, niteliğine göre en geç
+<strong>30 gün</strong> içinde ücretsiz olarak sonuçlandırılır; işlemin ayrıca maliyet gerektirmesi hâlinde
+Kurul'ca belirlenen tarifedeki ücret alınabilir.</p>
+<p>Anonim kullanım kayıtları kurulum kimliğine bağlı olduğundan, bu kayıtlara ilişkin bir talepte kimliğinizi
+eşleştirebilmemiz için ilgili kurulum kimliğini iletmeniz gerekebilir.</p>
+
+<h2>8. Değişiklikler</h2>
+<p>Bu metin güncellenirse üstteki "son güncelleme" tarihi değişir; önemli değişikliklerde uygulama içinde ayrıca
+bilgilendirme yapılır.</p>
+
+<footer>
+  ViraCheck · Ege Seymen<br>
+  Bu metin bilgilendirme amaçlıdır; hukuki danışmanlık yerine geçmez.
+</footer>
+
+</div>
+</body>
+</html>
