@@ -1,19 +1,25 @@
 /* ViraCheck — tanıtım sitesi
  *
- * Renkler uygulamanın kendi paletinden gelir (src/theme). Site tamamen
- * koyudur ve sistem temasını TAKİP ETMEZ: uygulama yalnızca koyu temada
- * çalışıyor (app.json → userInterfaceStyle: "dark"), sitenin de aynı
- * karakterde olması gerekiyor. Gövde zemini kahraman gradyanının bittiği
- * renkle (--deep) aynı, böylece bölümler arasında dikiş görünmüyor.
+ * Renkler uygulamanın kendi paletinden gelir (src/theme.ts → lightColors).
+ * Uygulamanın birincil teması beyaz; gece modu kullanıcının açtığı bir
+ * seçenek. Site de bu yüzden beyaz ve sistem temasını TAKİP ETMEZ: siteyi
+ * görüp uygulamayı indiren kişi aynı görünümle karşılaşsın.
+ *
+ * Marka turkuazı (#2ED3C6) beyaz üzerinde 1.7:1 kalıyor, yani okunmuyor;
+ * vurgu bu yüzden aynı ailenin koyu tonu (#09707F, beyaz üzerinde 5.78:1).
+ * Uygulamadaki palet de aynı sebeple böyle.
  */
 
 :root{
-  color-scheme:dark;
-  --bg:#0A1420; --fg:#e8eef4; --muted:#93a4b5; --line:#1e2c3b;
-  --accent:#2ED3C6; --accent-soft:#2ED3C61f; --card:#101d2b;
-  --deep:#0A1420; --deep-2:#0f2233; --on-deep:#e8eef4; --on-deep-muted:#93a4b5;
-  --teal:#2ED3C6; --danger:#e5484d;
+  color-scheme:light;
+  --bg:#F4F6F8; --fg:#0E1C28; --muted:#4F6475; --faint:#5E7282; --line:#D5DEE6;
+  --accent:#09707F; --accent-soft:#E6F1F2; --card:#FFFFFF;
+  --on-accent:#FFFFFF; --danger:#C62A2F;
   --radius:16px;
+  /* Beyaz zeminde kartları ayırmak için kenarlık tek başına zayıf kalıyor;
+   * çok yumuşak bir gölge derinliği veriyor. */
+  --golge:0 1px 2px rgba(14,28,40,.04), 0 10px 28px -16px rgba(14,28,40,.16);
+  --golge-guclu:0 2px 6px rgba(14,28,40,.06), 0 28px 60px -28px rgba(14,28,40,.30);
 }
 
 *{box-sizing:border-box}
@@ -31,15 +37,16 @@ a:hover{text-decoration:underline}
 
 .hero{
   position:relative; overflow:hidden;
-  background:linear-gradient(180deg, var(--deep-2) 0%, var(--deep) 62%);
-  color:var(--on-deep);
+  /* Uygulamanın açık temadaki gökyüzü zemini: üstte soluk deniz mavisi,
+   * aşağı doğru sayfa zeminine sönüyor. */
+  background:linear-gradient(180deg,#DCEAF2 0%,#EBF1F5 38%,var(--bg) 78%);
+  color:var(--fg);
 }
-/* Teal ışıma — uygulamanın hava ekranındaki zemin hissi. */
 .hero::before{
   content:""; position:absolute; inset:0; pointer-events:none;
   background:
-    radial-gradient(680px 420px at 50% 0%, rgba(46,211,198,.20), transparent 62%),
-    radial-gradient(420px 300px at 12% 32%, rgba(46,211,198,.08), transparent 70%);
+    radial-gradient(760px 440px at 50% -4%, rgba(9,112,127,.10), transparent 64%),
+    radial-gradient(420px 300px at 12% 30%, rgba(9,112,127,.05), transparent 70%);
 }
 .hero > *{position:relative}
 
@@ -49,47 +56,49 @@ a:hover{text-decoration:underline}
 }
 .brand{display:flex; align-items:center; gap:11px; font-weight:700; letter-spacing:.01em}
 .brand img{width:30px; height:30px; border-radius:8px; display:block}
-.nav a{color:var(--on-deep-muted); font-size:.92rem}
-.nav a:hover{color:var(--teal)}
+.nav a{color:var(--muted); font-size:.92rem}
+.nav a:hover{color:var(--accent)}
 
 .hero-inner{text-align:center; padding:38px 0 0}
 .hero .mark{
   width:82px; height:82px; border-radius:20px; display:block; margin:0 auto 26px;
-  box-shadow:0 18px 40px -14px rgba(0,0,0,.8), 0 0 0 1px rgba(255,255,255,.07);
+  box-shadow:0 18px 38px -16px rgba(14,28,40,.45);
 }
 .hero h1{
   font-size:clamp(2rem, 5.2vw, 3.35rem); line-height:1.1;
   letter-spacing:-.028em; margin:0 0 18px; font-weight:700;
 }
 .hero .lead{
-  font-size:clamp(1.02rem, 1.8vw, 1.2rem); color:var(--on-deep-muted);
+  font-size:clamp(1.02rem, 1.8vw, 1.2rem); color:var(--muted);
   max-width:600px; margin:0 auto 28px;
 }
 .pill{
   display:inline-flex; align-items:center; gap:10px;
-  border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.05);
+  border:1px solid var(--line); background:rgba(255,255,255,.76);
   border-radius:999px; padding:10px 20px; font-size:.92rem;
-  color:var(--on-deep-muted); backdrop-filter:blur(6px);
+  color:var(--muted); backdrop-filter:blur(6px);
 }
-.pill b{color:var(--on-deep); font-weight:600}
+.pill b{color:var(--fg); font-weight:600}
 .store-btn{
   display:inline-block; margin-top:20px; padding:14px 28px; border-radius:999px;
-  background:var(--accent); color:#04202b; font-weight:700; font-size:1.02rem;
-  box-shadow:0 18px 40px -22px rgba(46,211,198,.9);
+  background:var(--accent); color:var(--on-accent); font-weight:700; font-size:1.02rem;
+  box-shadow:0 16px 34px -18px rgba(9,112,127,.75);
 }
-.store-btn:hover{filter:brightness(1.06)}
+.store-btn:hover{filter:brightness(1.08); text-decoration:none}
 
 .pill .dot{
-  width:8px; height:8px; border-radius:50%; background:var(--teal);
-  box-shadow:0 0 0 4px rgba(46,211,198,.18);
+  width:8px; height:8px; border-radius:50%; background:var(--accent);
+  box-shadow:0 0 0 4px rgba(9,112,127,.14);
 }
 
 /* ------------------------------------------------------- cihaz çerçevesi */
 
+/* Çerçeve koyu kalıyor: gerçek telefonun kasası koyu ve açık zeminde
+ * ekranın nerede bittiğini ancak o ayırıyor. */
 .phone{
   border-radius:34px; padding:7px;
-  background:linear-gradient(155deg,#33465c 0%,#16232f 42%,#0b131c 100%);
-  box-shadow:0 34px 70px -26px rgba(0,0,0,.85), 0 0 0 1px rgba(255,255,255,.05);
+  background:linear-gradient(155deg,#3b4b5c 0%,#1d2a36 42%,#121b24 100%);
+  box-shadow:var(--golge-guclu);
 }
 .phone img{display:block; width:100%; height:auto; border-radius:28px}
 
@@ -104,10 +113,10 @@ a:hover{text-decoration:underline}
 .stage::after{
   content:""; position:absolute; left:-40px; right:-40px; bottom:0;
   height:150px; pointer-events:none;
-  background:linear-gradient(180deg, rgba(10,20,32,0) 0%, var(--deep) 82%);
+  background:linear-gradient(180deg, rgba(244,246,248,0) 0%, var(--bg) 84%);
 }
 .stage .phone{width:264px; flex:none}
-.stage .side{width:228px; opacity:.92}
+.stage .side{width:228px; opacity:.94}
 .stage .left{transform:translateX(34px) translateY(26px) rotate(-4deg); z-index:1}
 .stage .right{transform:translateX(-34px) translateY(26px) rotate(4deg); z-index:1}
 .stage .center{z-index:2}
@@ -126,7 +135,7 @@ h2{font-size:clamp(1.5rem, 3vw, 2rem); line-height:1.2; letter-spacing:-.02em; m
 .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
 .feature{
   background:var(--card); border:1px solid var(--line);
-  border-radius:var(--radius); padding:26px 24px;
+  border-radius:var(--radius); padding:26px 24px; box-shadow:var(--golge);
 }
 .icon{
   width:42px; height:42px; border-radius:12px; margin-bottom:16px;
@@ -157,19 +166,49 @@ h2{font-size:clamp(1.5rem, 3vw, 2rem); line-height:1.2; letter-spacing:-.02em; m
 
 .panel{
   background:var(--card); border:1px solid var(--line);
-  border-radius:var(--radius); padding:34px 36px;
+  border-radius:var(--radius); padding:34px 36px; box-shadow:var(--golge);
 }
-.panel.alert{border-color:color-mix(in srgb, var(--danger) 38%, var(--line))}
-.panel.alert .icon{background:rgba(229,72,77,.12); color:var(--danger)}
+.panel.alert{border-color:color-mix(in srgb, var(--danger) 34%, var(--line))}
+.panel.alert .icon{background:rgba(198,42,47,.10); color:var(--danger)}
+
+/* ------------------------------------------------- iş ortaklığı bölümü */
+
+/* Reklamveren ağları (Awin, doğrudan ortaklıklar) başvuruyu değerlendirirken
+ * bu bölüme bakıyor: kitle kim, entegrasyon nasıl çalışıyor, kime yazılır. */
+.partner-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:28px}
+.stat{
+  background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+  padding:22px 24px; box-shadow:var(--golge);
+}
+.stat b{display:block; font-size:1.42rem; letter-spacing:-.02em; margin-bottom:4px}
+.stat span{color:var(--muted); font-size:.92rem}
+.partner-cta{
+  margin-top:24px; display:flex; flex-wrap:wrap; gap:12px 20px; align-items:center;
+}
+.btn-ghost{
+  display:inline-block; padding:12px 24px; border-radius:999px;
+  border:1px solid var(--accent); color:var(--accent); font-weight:600; font-size:.96rem;
+}
+.btn-ghost:hover{background:var(--accent-soft); text-decoration:none}
+
+/* Ortak markaları — tek sıra, sade. */
+.brands{
+  display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 0; padding:0; list-style:none;
+}
+.brands li{
+  border:1px solid var(--line); background:var(--card); border-radius:999px;
+  padding:8px 16px; font-size:.92rem; color:var(--muted);
+}
+.brands li b{color:var(--fg); font-weight:600}
 
 /* ----------------------------------------------------------- fiyatlama */
 
 .plans{display:grid; grid-template-columns:repeat(2,1fr); gap:20px}
 .plan{
   border:1px solid var(--line); border-radius:var(--radius);
-  padding:30px 28px; background:var(--card);
+  padding:30px 28px; background:var(--card); box-shadow:var(--golge);
 }
-.plan.pro{border-color:var(--accent); background:var(--accent-soft)}
+.plan.pro{border-color:var(--accent); background:var(--accent-soft); box-shadow:none}
 .plan h3{margin:0 0 6px; font-size:1.15rem}
 .plan .tag{font-size:.82rem; color:var(--accent); font-weight:700; letter-spacing:.06em; text-transform:uppercase}
 .plan ul{list-style:none; margin:18px 0 0; padding:0; color:var(--muted); font-size:.95rem}
@@ -183,18 +222,18 @@ footer{
   color:var(--muted); font-size:.92rem;
 }
 footer .links{margin:0 0 18px; display:flex; flex-wrap:wrap; gap:8px 20px}
-.fine{font-size:.84rem; margin:0 0 9px; opacity:.9; max-width:760px}
+.fine{font-size:.84rem; margin:0 0 9px; color:var(--faint); max-width:760px}
 
 /* --------------------------------------------------------------- dar ekran */
 
 @media (max-width:900px){
-  .grid{grid-template-columns:repeat(2,1fr)}
+  .grid, .partner-grid{grid-template-columns:repeat(2,1fr)}
   .split{grid-template-columns:1fr; gap:38px}
   .split .phone{width:270px; margin:0 auto}
 }
 @media (max-width:680px){
   section{padding:56px 0}
-  .grid, .plans{grid-template-columns:1fr}
+  .grid, .plans, .partner-grid{grid-template-columns:1fr}
   .panel{padding:26px 22px}
 
   /* Dar ekranda da üç telefon birden görünsün. Kartlar küçülüp birbirine
