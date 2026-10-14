@@ -69,7 +69,7 @@ ViraCheck mobil uygulamasını kullanırken hangi kişisel verilerinizin işlend
   <ul>
     <li>ViraCheck'te <strong>hesap yoktur</strong>; ad, e-posta, telefon gibi kimlik bilgisi istemiyoruz.</li>
     <li>Kontrol listeleriniz, seyir defteriniz ve tekne bilgileriniz <strong>yalnızca cihazınızda</strong> kalır; bize hiç ulaşmaz.</li>
-    <li>Bize ulaşan tek veri, <strong>açık rızanızla</strong> gönderilen anonim kullanım sayıları ve hizmetin çalışması için gereken konum koordinatlarıdır.</li>
+    <li>Bize ulaşan tek veri, istediğiniz an kapatabileceğiniz anonim kullanım sayıları ve hizmetin çalışması için gereken konum koordinatlarıdır.</li>
     <li>Kişisel veri <strong>satmıyoruz</strong>, reklam ağı kullanmıyoruz.</li>
   </ul>
 </div>
@@ -77,7 +77,7 @@ ViraCheck mobil uygulamasını kullanırken hangi kişisel verilerinizin işlend
 <h2>1. Veri sorumlusunun kimliği</h2>
 <table>
   <tr><th>Veri sorumlusu</th><td>Ege Seymen (gerçek kişi)</td></tr>
-  <tr><th>Uygulama</th><td>ViraCheck — iOS ve iPadOS</td></tr>
+  <tr><th>Uygulama</th><td>ViraCheck — iOS, iPadOS ve Android</td></tr>
   <tr><th>İletişim</th><td><a href="mailto:egeseymen@icloud.com">egeseymen@icloud.com</a></td></tr>
   <tr><th>İnternet sitesi</th><td><a href="https://egesey.github.io/viracheck/">egesey.github.io/viracheck</a></td></tr>
 </table>
@@ -93,7 +93,7 @@ içerik (kontrol listeleri, seyir defteri, tekne bilgileri, ayarlar) tarafımız
     <th>Konum verisi<br><span style="font-weight:400;color:var(--muted)">enlem/boylam</span></th>
     <td>
       Bulunduğunuz mevkiye göre rüzgâr, dalga ve deniz durumu hesaplamak ve yakındaki koy/plaj listesini üretmek için.<br>
-      <strong>Hukuki sebep:</strong> KVKK m.5/1 — <strong>açık rıza</strong> (iOS konum izni). İzin vermezseniz
+      <strong>Hukuki sebep:</strong> KVKK m.5/1 — <strong>açık rıza</strong> (işletim sisteminin konum izni; onay ekranı geçilmeden istenmez). İzin vermezseniz
       uygulamanın geri kalanı çalışır, yalnızca hava ve koy özellikleri kapanır.<br>
       <strong>Saklama:</strong> Tam konumunuz saklanmaz, konum geçmişi tutulmaz. Koy listesini tekrar indirmemek
       için yaklaşık konumunuz (~1 km çözünürlükte) yalnızca cihazınızda, en fazla 12 bölge olacak şekilde önbelleğe alınır.
@@ -103,8 +103,10 @@ içerik (kontrol listeleri, seyir defteri, tekne bilgileri, ayarlar) tarafımız
     <th>Anonim kullanım sayıları<br><span style="font-weight:400;color:var(--muted)">kurulum kimliği + sayaçlar</span></th>
     <td>
       Uygulamanın hangi bölümlerinin kullanıldığını anlamak ve geliştirme önceliklerini belirlemek için.<br>
-      <strong>Hukuki sebep:</strong> KVKK m.5/1 — <strong>açık rıza</strong>. Uygulama bir kez açıkça sorar;
-      onaylamazsanız tek bir istek bile gönderilmez. İzni Tekne → Ayarlar'dan istediğiniz an kapatabilirsiniz.<br>
+      <strong>Hukuki sebep:</strong> KVKK m.5/2-f — <strong>meşru menfaat</strong> (uygulamanın geliştirilmesi). Yalnızca
+      sayılar işlendiği ve kimlik, konum ya da içerik gönderilmediği için temel hak ve özgürlüklerinize zarar vermez.
+      Ölçüm varsayılan olarak açıktır; Tekne → Bildirim → Anonim istatistik anahtarından istediğiniz an kapatabilirsiniz,
+      kapattığınızda tek bir istek bile gönderilmez.<br>
       <strong>Kapsam:</strong> Kurulum başına rastgele üretilen bir kimlik; kaç tekne/sefer kaydınız olduğu, toplam
       deniz mili, tamamlanan liste sayısı, hangi sekmelerin kaç kez açıldığı, kiralama bağlantılarına kaç kez ve
       hangi bölge kartına dokunulduğu, abonelik ekranı görüntülemeleri, Pro olup olmadığınız, uygulama sürümü,
@@ -120,7 +122,7 @@ içerik (kontrol listeleri, seyir defteri, tekne bilgileri, ayarlar) tarafımız
       ViraCheck Pro aboneliğinin durumunu doğrulamak ve satın alımları geri yüklemek için.<br>
       <strong>Hukuki sebep:</strong> KVKK m.5/2-c — <strong>sözleşmenin kurulması veya ifası</strong>.<br>
       <strong>Kapsam:</strong> Rastgele üretilmiş anonim bir kullanıcı kimliği, satın alınan ürün, tarih ve
-      yenilenme durumu ile cihaz türü/ülke gibi teknik bilgiler. Ödeme bilgileriniz Apple tarafından işlenir,
+      yenilenme durumu ile cihaz türü/ülke gibi teknik bilgiler. Ödeme bilgileriniz Apple ya da Google tarafından işlenir,
       bize hiçbir zaman iletilmez.
     </td>
   </tr>
@@ -139,13 +141,15 @@ hizmet sağlayıcılara aktarım yapılır:</p>
 <table>
   <tr><th>Open-Meteo</th><td>Hava ve deniz tahmini. Yalnızca koordinat ve istenen tahmin alanları iletilir. (Almanya)</td></tr>
   <tr><th>OpenStreetMap / Overpass API</th><td>Koy ve plaj listesi. Yalnızca koordinat ve arama yarıçapı iletilir. Uygulamaya gömülü bölgelerde hiç istek yapılmaz. (AB)</td></tr>
-  <tr><th>Apple</th><td>Uygulama dağıtımı, abonelik tahsilatı ve koordinatın yer adına çevrilmesi. (ABD/AB)</td></tr>
-  <tr><th>Google — Firebase</th><td>Anonim kullanım sayılarının saklanması. Veritabanı <strong>Avrupa (eur3)</strong> bölgesinde tutulur. Yalnızca açık rıza verdiyseniz.</td></tr>
+  <tr><th>Apple</th><td>iPhone ve iPad'de uygulama dağıtımı, abonelik tahsilatı, koordinatın yer adına çevrilmesi ve rota haritası. (ABD/AB)</td></tr>
+  <tr><th>Google</th><td>Android'de uygulama dağıtımı, abonelik tahsilatı, koordinatın yer adına çevrilmesi ve rota haritası. (ABD/AB)</td></tr>
+  <tr><th>Google — Firebase</th><td>Anonim kullanım sayılarının saklanması. Veritabanı <strong>Avrupa (eur3)</strong> bölgesinde tutulur. Ölçümü kapattıysanız aktarım yapılmaz.</td></tr>
   <tr><th>RevenueCat</th><td>Abonelik durumunun doğrulanması. (ABD)</td></tr>
   <tr><th>Awin ve iş ortağı platformlar</th><td>Kiralama bağlantısına dokunduğunuzda tarayıcı, ortaklık ağının (Awin) alan adı üzerinden iş ortağının sayfasına yönlendirilir. Bu sırada ağ ve iş ortağı kendi çerezlerini yerleştirebilir. Ortaklara sizi tanımlayan bilgi göndermeyiz; yalnızca bağlantının ViraCheck'ten geldiğini belirten ortaklık kimliği taşınır.</td></tr>
 </table>
 <p>Bu sağlayıcıların bir kısmı yurt dışında bulunduğundan, veriler KVKK m.9 kapsamında yurt dışına aktarılmaktadır.
-Aktarım, açık rızanızın bulunduğu hâllerde rızaya; abonelik gibi hâllerde ise sözleşmenin ifası şartına dayanır.</p>
+Aktarım, konum gibi açık rızanızın bulunduğu hâllerde rızaya; abonelik gibi hâllerde sözleşmenin ifası şartına;
+anonim kullanım sayılarında ise KVKK m.9'da öngörülen uygun güvencelere dayanır.</p>
 
 <h2>4. Kişisel veri toplamanın yöntemi</h2>
 <p>Kişisel verileriniz, ViraCheck mobil uygulaması üzerinden <strong>elektronik ortamda ve otomatik yollarla</strong>
@@ -154,8 +158,8 @@ toplanır. Fiziki ortamda veri toplanmaz; çağrı merkezi, form veya kayıt ekr
 <h2>5. Saklama süresi</h2>
 <ul>
   <li><strong>Cihazınızdaki içerik:</strong> siz silene veya uygulamayı kaldırana kadar.</li>
-  <li><strong>Anonim kullanım kayıtları:</strong> ölçümü kapattığınızda cihazdaki kimlik silinir; sunucudaki kaydın silinmesini talep edebilirsiniz.</li>
-  <li><strong>Abonelik kayıtları:</strong> Apple ve RevenueCat'in kendi saklama süreleri boyunca.</li>
+  <li><strong>Anonim kullanım kayıtları:</strong> ölçümü kapattığınızda cihazdaki kimlik silinir; sunucudaki kaydın silinmesini talep edebilirsiniz. Telefon iCloud ya da Google yedeğinden geri yüklenirse kimlik de uygulama verileriyle birlikte geri gelir.</li>
+  <li><strong>Abonelik kayıtları:</strong> Apple ya da Google ve RevenueCat'in kendi saklama süreleri boyunca.</li>
   <li><strong>E-posta yazışmaları:</strong> talebin sonuçlanmasından sonra makul süre içinde.</li>
 </ul>
 

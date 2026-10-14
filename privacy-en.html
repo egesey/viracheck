@@ -59,7 +59,7 @@
     <li>ViraCheck has no accounts — you never sign up.</li>
     <li>Everything you create — checklists, logbook, boat details — stays on your device.</li>
     <li>There are no ad networks, and we never sell your data.</li>
-    <li>We collect anonymous usage counts (how many boats, how many trips) <strong>only if you allow it</strong>. Your name, your location and your logbook content are never included, and you can turn it off at any time (see section 6).</li>
+    <li>We collect anonymous usage counts (how many boats, how many trips). Your name, your location and your logbook content are never included, and you can <strong>turn it off at any time</strong> inside the app (see section 6).</li>
   </ul>
 </div>
 
@@ -71,17 +71,18 @@
   <li>Boat details</li>
   <li>App settings</li>
 </ul>
-<p>This data never leaves your device and is never sent to us. If iCloud Backup is enabled on your device, this content may be included in Apple's backup, in which case Apple's privacy policy applies to it.</p>
+<p>This data never leaves your device and is never sent to us. If iCloud or Google backup is enabled on your device, this content may be included in Apple's or Google's backup, in which case that company's privacy policy applies to it.</p>
 
 <h2>2. Location</h2>
-<p>We ask for location permission so the app can calculate wind, wave, and go/no-go information for where you actually are.</p>
+<p>We ask for location permission so the app can calculate wind, wave, and go/no-go information for where you actually are. The permission is requested through your operating system's own prompt when you first open the app.</p>
 <ul>
   <li>Your precise location is not stored on your device, and no location history is kept.</li>
   <li>Your coordinates are sent to Open-Meteo and OpenStreetMap only while a forecast or cove request is being made.</li>
   <li>So the nearby cove list is not re-fetched every time, an <strong>approximate</strong> location (about 1 km resolution) is cached on your device alongside the results. This cache is capped at 12 areas, never leaves your device, and is removed by <em>Reset data</em>.</li>
-  <li>To display the name of your location on screen, the coordinates are passed to Apple's geocoding service through your device's operating system.</li>
+  <li>To display the name of your location on screen, the coordinates are passed to a geocoding service through your device's operating system: Apple's on iPhone and iPad, Google's on Android.</li>
+  <li>The map on the route screen is drawn with Apple Maps on iPhone and iPad and with Google Maps on Android. Because map imagery is downloaded from these services, the area the map shows is passed to that company.</li>
   <li>If you decline the permission, the rest of the app works normally — only the weather and sea state cannot be shown.</li>
-  <li>You can revoke the permission at any time in iOS <em>Settings</em>.</li>
+  <li>You can revoke the permission at any time in your device's <em>Settings</em>.</li>
 </ul>
 
 <h2>3. Weather, sea state and cove data</h2>
@@ -97,21 +98,22 @@
   <li>We send the partner nothing that identifies you; the link carries only an affiliate identifier indicating it came from ViraCheck. The partner may set cookies on its own site.</li>
   <li>For some partners (SamBoat) the redirect passes through the <strong>Awin</strong> affiliate network's domain; Viravira links pass through the partner's own short-link domain. At that step the network may set its own cookie to record which publisher the click belongs to. We send these networks nothing that identifies you either.</li>
   <li>We may earn a commission on charters booked through these links. This does not change the price you see.</li>
-  <li>On the app side we only count <em>how many times</em> and <em>which regional card</em> was tapped, and even that is sent only if you allowed the measurement described in section 6.</li>
+  <li>On the app side we only count <em>how many times</em> and <em>which regional card</em> was tapped, and even that is sent only while the measurement described in section 6 is switched on.</li>
 </ul>
 
 <h2>5. Subscriptions and purchases</h2>
-<p>The ViraCheck Pro subscription is sold through the App Store and managed with <a href="https://www.revenuecat.com">RevenueCat</a>.</p>
+<p>The ViraCheck Pro subscription is sold through the App Store on iPhone and iPad and through Google Play on Android, and managed with <a href="https://www.revenuecat.com">RevenueCat</a>.</p>
 <ul>
-  <li>Your payment details are handled by Apple and are never shared with us.</li>
+  <li>Your payment details are handled by Apple or Google and are never shared with us.</li>
   <li>To track your subscription status, RevenueCat processes purchase information (product, date, renewal state) together with technical details such as device type and country, under a randomly generated anonymous user ID. Your name and email address are not sent.</li>
   <li>RevenueCat privacy policy: <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></li>
   <li>Apple Media Services privacy policy: <a href="https://www.apple.com/legal/privacy/data/en/app-store/">apple.com/legal/privacy/data/en/app-store</a></li>
+  <li>Google privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
 </ul>
 
 <h2>6. Anonymous usage statistics</h2>
-<p>To understand where the app needs work, we collect anonymous usage counts. <strong>This happens only with your consent:</strong> the app asks once, plainly. If you say no, not a single request is sent and you are never asked again.</p>
-<p>If you allow it, the following is sent at most once a day:</p>
+<p>To understand where the app needs work, we collect anonymous usage counts. The measurement is <strong>on by default</strong> and you can <strong>turn it off at any time</strong>; once it is off, not a single request is sent.</p>
+<p>While it is on, the following is sent at most once a day:</p>
 <ul>
   <li>How many boats and trips you have recorded, total nautical miles, how many checklists you completed</li>
   <li>How many times you tapped a charter link, and which regional card</li>
@@ -119,13 +121,14 @@
   <li>Whether you have a Pro subscription, the app version, platform (iOS/Android) and interface language</li>
   <li>The first and last date this installation was seen</li>
 </ul>
-<p>In addition, while the app is <strong>open</strong>, a <em>last-active timestamp</em> is written at most once a minute. It exists to answer "how many installations are using the app right now" and carries no other data; nothing is sent at all if you did not allow the measurement.</p>
+<p>In addition, while the app is <strong>open</strong>, a <em>last-active timestamp</em> is written at most once a minute. It exists to answer "how many installations are using the app right now" and carries no other data; nothing is sent at all while the measurement is off.</p>
 <p><strong>Never sent:</strong> your name, your email, boat name, MMSI, call sign, your trip notes, port and cove names, <strong>your location</strong>, or what you searched for. Your logbook and boat details stay on your device.</p>
-<p>Records are tied to an identifier generated at random for this installation. It is not linked to your Apple Account, device serial number, or advertising identifier; if you delete and reinstall the app, the link is broken and a new identifier is created. In other words we count installations, not people, and we do not track users across apps or devices.</p>
+<p>Records are tied to an identifier generated at random for this installation. It is not linked to your Apple Account, Google account, device serial number, or advertising identifier; if you delete and reinstall the app, the link is broken and a new identifier is created. If you restore your phone from an iCloud or Google backup, the identifier comes back along with the app's data; switching the measurement off is enough to break the link. In other words we count installations, not people, and we do not track users across apps or devices.</p>
 <p>The data is stored on Google's <a href="https://firebase.google.com">Firebase</a> infrastructure in the <strong>European Union</strong> region (<code>europe-west</code>). Only the ViraCheck developer can access it; it is not shared with third parties, sold, or used for advertising. Google's privacy policy: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></p>
-<p>You can turn it off at any time in the app under <em>Boat → Anonymous statistics</em>. Turning it off deletes the measurement identifier and counters from your device and stops any further sending.</p>
+<p>Where the GDPR applies, the legal basis for this measurement is our legitimate interest in improving the app (Art. 6(1)(f)); you can object at any time simply by switching it off. You can turn it off in the app under <em>Boat → Notifications → Anonymous statistics</em>. Turning it off deletes the measurement identifier and counters from your device and stops any further sending.</p>
 
 <h2>7. Notifications</h2>
+<p>Notification permission is requested through your operating system's own prompt when you first open the app. Granting it does not switch any notification on by itself; it is used only once you turn on the good-conditions reminder. You can withdraw it at any time in your device settings.</p>
 <p>The app uses only local notifications that run on your device (for example, a good-conditions reminder). Remote push infrastructure is disabled in the app; no data is sent to any server in order to deliver a notification.</p>
 
 <h2>8. Children's privacy</h2>
@@ -134,7 +137,7 @@
 <h2>9. Deleting your data</h2>
 <p>You can reset your checklists and boat details from the relevant sections inside the app. To permanently erase all local data, simply remove the app from your device.</p>
 <p>Turning off the anonymous statistics switch deletes the measurement identifier from your device. If you want anonymous records already sent to be deleted, write to the address below; because records are tied to an installation identifier, you may need to provide yours. You may also ask us to delete the record entirely.</p>
-<p>You can manage or cancel your subscription in iOS <em>Settings → your Apple Account → Subscriptions</em>. Subscription records are retained by Apple and RevenueCat.</p>
+<p>You can manage or cancel your subscription on iPhone and iPad in <em>Settings → your Apple Account → Subscriptions</em>, and on Android in <em>Google Play → Profile → Payments &amp; subscriptions</em>. Subscription records are retained by Apple or Google and RevenueCat.</p>
 
 <h2>10. Changes to this policy</h2>
 <p>If this policy is updated, the "last updated" date at the top of this page will change. For significant changes, we will also notify you inside the app.</p>
