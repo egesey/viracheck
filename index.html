@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ViraCheck — Tekne seyir asistanı</title>
-<meta name="description" content="Kalkış öncesi kontrol listeleri, rüzgâr ve deniz durumu, yakındaki koylar, mavi bayraklı yerler ve seyir defteri. Hesap yok — içeriğiniz cihazınızda kalır.">
+<title>ViraCheck — Tekne Kiralama, Tekne Turu ve Seyir Asistanı</title>
+<meta name="description" content="Ege ve Akdeniz'de tekne kiralama ve günübirlik tekne turu — bölgeler bulunduğunuz yere uzaklığıyla sıralanır. Üstüne rüzgâr ve deniz durumu, 9.310 koy, rota planlama ve kontrol listeleri. Hesap yok.">
 <link rel="canonical" href="https://egesey.github.io/viracheck/">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="icon.png">
 <meta name="theme-color" content="#F4F6F8">
 <!-- Impact iş ortağı ağı site doğrulaması. -->
 <meta name='impact-site-verification' value='7d20c3fe-10fc-4278-ba26-3518eeddc6a9'>
-<meta property="og:title" content="ViraCheck — Tekne seyir asistanı">
-<meta property="og:description" content="Denize açılmadan önce her şey yerinde mi? Kontrol listeleri, hava ve deniz durumu, koylar ve seyir defteri.">
+<meta property="og:title" content="ViraCheck — Tekne Kiralama, Tekne Turu ve Seyir Asistanı">
+<meta property="og:description" content="Tekne kiralayın ya da günübirlik tura çıkın; rotayı, havayı ve koyları aynı uygulamada planlayın.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://egesey.github.io/viracheck/">
 <meta property="og:image" content="https://egesey.github.io/viracheck/icon.png">
-<link rel="stylesheet" href="site.css?v=6">
+<link rel="stylesheet" href="site.css?v=7">
 </head>
 <body>
 
@@ -29,11 +29,13 @@
 
     <div class="hero-inner">
       <img class="mark" src="icon.png" alt="ViraCheck uygulama simgesi" width="82" height="82">
-      <h1>Denize açılmadan önce,<br>her şey yerinde mi?</h1>
+      <h1>Tekne kiralama ve tekne turu —<br>rotasıyla, havasıyla, koylarıyla</h1>
       <p class="lead">
-        Kalkış öncesi kontrol listeleri, rüzgâr ve deniz durumu, yakındaki
-        koylar ve seyir defteri — tek uygulamada. Hesap açmadan, hiçbir yere
-        kaydolmadan.
+        Bodrum, Marmaris, Göcek, Fethiye, Çeşme, Antalya, İstanbul ve Yunanistan:
+        bölgeler bulunduğunuz yere uzaklığıyla sıralanır, dokunduğunuzda iş
+        ortağının rezervasyon sayfası açılır. Üstüne rüzgâr ve deniz durumu,
+        9.310 koy ve rota planlama — kiraladığınız tekneyle nereye gideceğinizi
+        de aynı uygulamada kurarsınız. Hesap açmadan.
       </p>
       <p class="pill"><span class="dot"></span><b>App Store'da yayında</b> · iPhone ve iPad</p>
       <!--
@@ -44,15 +46,20 @@
       <p><a class="store-btn" href="https://apps.apple.com/tr/app/viracheck/id6806044930" target="_blank" rel="noopener">App Store'da indir</a></p>
       <p class="store-not">iPhone ve iPad için · iOS 16.4 ve üzeri</p>
 
+      <!--
+        Ortadaki telefon sayfanın vaadini taşıyor. Kiralama asıl gelir kaynağı
+        olduğu için merkeze o alındı; hava ve koylar yanlarda, uygulamanın
+        kiralamadan sonrasını da çözdüğünü gösteriyor.
+      -->
       <div class="stage">
         <div class="phone side left">
-          <img src="screens/tr/koylar.png?v=2" alt="Koylar ekranı: yakındaki koy, plaj ve mavi bayraklı marinalar, mesafeleriyle" width="720" height="1565">
-        </div>
-        <div class="phone center">
           <img src="screens/tr/hava.png" alt="Hava ekranı: rüzgâr gülü, Beaufort kuvveti ve deniz durumu" width="720" height="1565">
         </div>
+        <div class="phone center">
+          <img src="screens/tr/kiralama.png" alt="Kiralama ekranı: Bodrum, Marmaris, Göcek ve Fethiye bölgeleri, mevkiye uzaklıklarıyla" width="720" height="1565">
+        </div>
         <div class="phone side right">
-          <img src="screens/tr/kontrol.png" alt="Kontroller ekranı: sefere hazırlık yüzdesi ve kontrol listeleri" width="720" height="1565">
+          <img src="screens/tr/koylar.png?v=2" alt="Koylar ekranı: yakındaki koy, plaj ve mavi bayraklı marinalar, mesafeleriyle" width="720" height="1565">
         </div>
       </div>
     </div>
@@ -61,12 +68,123 @@
 
 <div class="wrap">
 
-<section id="ozellikler">
-  <p class="eyebrow">Ne yapar</p>
-  <h2>Her seferde tekrarlanan işler, tek yerde</h2>
+<section id="kiralama">
+  <p class="eyebrow">Kiralama ve turlar</p>
+  <h2>Tekneyi de, günübirlik turu da<br>uygulamanın içinden bulun</h2>
   <p class="sub">
-    Hazırlıktan seyir kaydına kadar; tekneyle denize çıkan herkesin her çıkışta
-    yeniden yaptığı şeyler.
+    İki ayrı sekme: teknenin tamamını kiralamak ya da günübirlik tekne turuna
+    katılmak. Bölgeler bulunduğunuz yere uzaklığıyla sıralanır; dokunduğunuzda
+    iş ortağının kendi rezervasyon sayfası uygulama içi tarayıcıda açılır.
+  </p>
+
+  <div class="offers">
+    <article class="offer">
+      <div class="offer-media">
+        <img src="img/kiralama-yelken.jpg" alt="Kornati takımadalarında yelken açmış bir yat" width="1400" height="929" loading="lazy">
+        <span class="offer-tag">Tekne kiralama</span>
+        <p class="offer-count"><b>19</b><span>kiralama bölgesi</span></p>
+      </div>
+      <div class="offer-body">
+        <h3>Teknenin tamamı sizin</h3>
+        <p>Dümen sizde ya da kaptanlı: yelkenli, katamaran ve motoryat. Ege'den Adriyatik'e, rotayı siz çizersiniz.</p>
+        <ul class="checks">
+          <li><strong>Türkiye:</strong> Bodrum, Marmaris, Göcek, Fethiye, Çeşme, Antalya, İstanbul</li>
+          <li><strong>Yurt dışı:</strong> Yunanistan, Hırvatistan'da 8 bölge, Mallorca, Miami</li>
+        </ul>
+        <div class="offer-partners"><span>İlanlar:</span><span class="chip">SamBoat</span><span class="chip">SkipperCity</span><span class="chip">Viravira</span></div>
+      </div>
+    </article>
+
+    <article class="offer">
+      <div class="offer-media">
+        <img src="img/kiralama-gulet.jpg" alt="Bodrum'da bir guletin güvertesi, Türk bayrakları ve gölgelik" width="1200" height="900" loading="lazy">
+        <span class="offer-tag">Tekne turu</span>
+        <p class="offer-count"><b>12</b><span>tur bölgesi</span></p>
+      </div>
+      <div class="offer-body">
+        <h3>Günübirlik tura katılın</h3>
+        <p>Tekne sizin olmasa da deniz sizin: koy turları, yüzme molaları ve gün batımı turları — sabah binip akşam inersiniz.</p>
+        <ul class="checks">
+          <li><strong>Türkiye:</strong> Bodrum, Marmaris, Göcek, Fethiye, Çeşme, Antalya, İstanbul Boğazı</li>
+          <li><strong>Yurt dışı:</strong> Atina, Yunan adaları, Split, Mallorca, Miami</li>
+        </ul>
+        <div class="offer-partners"><span>Turlar:</span><span class="chip">GetYourGuide</span></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="regions-head">
+    <h3>Öne çıkan bölgeler</h3>
+    <p>Ayrıca Çeşme, Antalya, İstanbul, Mallorca ve Miami</p>
+  </div>
+  <div class="region-grid">
+    <figure class="region">
+      <img src="img/bolge-bodrum.jpg" alt="Bodrum Kalesi ve limanı" width="1000" height="667" loading="lazy">
+      <figcaption><b>Bodrum</b><span>Kiralama · Tur</span></figcaption>
+    </figure>
+    <figure class="region">
+      <img src="img/bolge-marmaris.jpg" alt="Marmaris marinasına yukarıdan bakış" width="1000" height="750" loading="lazy">
+      <figcaption><b>Marmaris</b><span>Kiralama · Tur</span></figcaption>
+    </figure>
+    <figure class="region">
+      <img src="img/bolge-gocek.jpg" alt="Göcek Körfezi'nde demirli yatlar" width="1000" height="666" loading="lazy">
+      <figcaption><b>Göcek</b><span>Kiralama · Tur</span></figcaption>
+    </figure>
+    <figure class="region">
+      <img src="img/bolge-fethiye.jpg" alt="Fethiye Ölüdeniz lagünü" width="1000" height="666" loading="lazy">
+      <figcaption><b>Fethiye</b><span>Kiralama · Tur</span></figcaption>
+    </figure>
+    <figure class="region">
+      <img src="img/bolge-yunanistan.jpg" alt="Yunanistan, Hydra adasının limanı" width="1000" height="666" loading="lazy">
+      <figcaption><b>Yunanistan</b><span>Atina ve adalar</span></figcaption>
+    </figure>
+    <figure class="region">
+      <img src="img/bolge-hirvatistan.jpg" alt="Hırvatistan, limandan Hvar kasabası" width="1000" height="750" loading="lazy">
+      <figcaption><b>Hırvatistan</b><span>Split’ten Dubrovnik’e 8 bölge</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-no">1</div>
+      <h4>En yakından başlar</h4>
+      <p>Bodrum'daysanız önce Bodrum, sonra Marmaris 42 NM, Göcek 74 NM, Fethiye 84 NM. Mesafe deniz mili ya da kilometre, ayarlardan.</p>
+    </div>
+    <div class="step">
+      <div class="step-no">2</div>
+      <h4>Kiralama ya da tur</h4>
+      <p>Sekmeyi seçip bölgeye dokunun; iş ortağının o bölgedeki ilanları uygulama içi tarayıcıda açılır.</p>
+    </div>
+    <div class="step">
+      <div class="step-no">3</div>
+      <h4>Rezervasyon ortağın sayfasında</h4>
+      <p>Fiyat, müsaitlik ve ödeme iş ortağındadır; ortağın sayfasında yazan fiyat neyse odur. ViraCheck'te hesap, form ya da ödeme yok.</p>
+    </div>
+  </div>
+
+  <div class="partner-strip">
+    <span>İlanları listelediğimiz platformlar</span>
+    <ul class="brands">
+      <li><b>SamBoat</b></li>
+      <li><b>SkipperCity</b></li>
+      <li><b>Viravira</b></li>
+      <li><b>GetYourGuide</b></li>
+    </ul>
+    <p class="fine">
+      Bağlantılar iş ortaklarımıza aittir ve bu bağlantılardan yapılan kiralamalarda
+      komisyon alabiliriz; bu, ödeyeceğiniz fiyatı değiştirmez. Rezervasyon, ödeme ve
+      kiralama sözleşmesi doğrudan iş ortağıyla kurulur; ViraCheck taraf değildir.
+    </p>
+  </div>
+</section>
+
+<section id="ozellikler">
+  <p class="eyebrow">Kiraladıktan sonra</p>
+  <h2>Tekneyi tuttunuz.<br>Asıl iş şimdi başlıyor.</h2>
+  <p class="sub">
+    Rezervasyon bir günlük iş, seyir bir haftalık. Hava ne olacak, nereye
+    demirlenir, kalkıştan önce ne kontrol edilir — tekneyi bulduğunuz yerde
+    bunların hepsi de var.
   </p>
 
   <div class="grid">
@@ -154,28 +272,6 @@
   </div>
 </section>
 
-<section id="kiralama">
-  <p class="eyebrow">Kiralama</p>
-  <h2>Tekne kiralama ve tekne turu,<br>uygulamanın içinde</h2>
-  <p class="sub">
-    Rotanızı planlarken tekneyi de buradan bulun. Kiralama sekmesi iş ortağı
-    platformların bölgelerini listeler; dokunduğunuzda ortağın kendi rezervasyon
-    sayfası uygulama içi tarayıcıda açılır.
-  </p>
-  <div class="panel">
-    <ul class="checks" style="margin-top:0">
-      <li><strong>İki ayrı sekme:</strong> teknenin tamamını kiralamak ya da günübirlik tekne turuna katılmak</li>
-      <li><strong>Mesafeye göre:</strong> bölgeler mevkinize uzaklığıyla sıralanır, uzaktakiler ayrı başlıkta</li>
-      <li><strong>Hesap yok:</strong> ViraCheck tarafında kayıt, form ya da ödeme yok</li>
-      <li><strong>Fiyat değişmez:</strong> ortağın sayfasında yazan fiyat neyse odur</li>
-    </ul>
-    <p style="margin:14px 0 0;font-size:.92rem;color:var(--muted)">
-      Bağlantılar iş ortaklarımıza aittir ve bu bağlantılardan yapılan kiralamalarda
-      komisyon alabiliriz; bu, ödeyeceğiniz fiyatı değiştirmez. Rezervasyon, ödeme ve
-      kiralama sözleşmesi doğrudan iş ortağıyla kurulur; ViraCheck taraf değildir.
-    </p>
-  </div>
-</section>
 
 <section id="ortaklik">
   <p class="eyebrow">İş ortaklarımıza</p>
@@ -208,14 +304,14 @@
       <li><strong>Veri toplamıyoruz:</strong> kullanıcıdan ad, e-posta ya da ödeme bilgisi istemiyoruz; sayfanıza yönlendirip çekiliyoruz.</li>
       <li><strong>Şeffaf anlatım:</strong> komisyon aldığımız hem uygulamanın içinde hem bu sayfada açıkça yazıyor.</li>
     </ul>
-    <p style="margin:16px 0 0">Ortaklık kurduğumuz ve görüşmesi süren platformlar:</p>
+    <p style="margin:16px 0 0">Ortaklığı kurulmuş, uygulamada yayında olan platformlar:</p>
     <ul class="brands">
       <li><b>SamBoat</b></li>
-      <li><b>GetYourGuide</b></li>
       <li><b>SkipperCity</b></li>
-      <li><b>Viator</b></li>
       <li><b>Viravira</b></li>
+      <li><b>GetYourGuide</b></li>
     </ul>
+    <p style="margin:16px 0 0;font-size:.94rem;color:var(--muted)">Başvurusu değerlendirmede olanlar: Viator, Sailo.</p>
     <div class="partner-cta">
       <a class="btn-ghost" href="mailto:egeseymen@icloud.com?subject=ViraCheck%20--%20is%20ortakligi">İş ortaklığı için yazın</a>
       <span style="color:var(--muted);font-size:.94rem">egeseymen@icloud.com</span>
@@ -308,6 +404,17 @@
     Hava ve deniz verileri: <a href="https://open-meteo.com">Open-Meteo</a> (CC BY 4.0) ·
     Koy ve plaj verileri © <a href="https://www.openstreetmap.org">OpenStreetMap</a> katkıda bulunanları ·
     Mavi Bayrak verileri: <a href="https://www.blueflag.global">FEE</a>, 2026 sezonu
+  </p>
+  <p class="fine">
+    Fotoğraflar <a href="https://commons.wikimedia.org">Wikimedia Commons</a>'tan:
+    <a href="https://commons.wikimedia.org/wiki/File:Voilier_%C3%A0_Kornati.jpg">julien</a> (CC BY 2.0) ·
+    <a href="https://commons.wikimedia.org/wiki/File:Bodrum_02.jpg">Chris Mitchell</a> (CC BY-SA 4.0) ·
+    <a href="https://commons.wikimedia.org/wiki/File:Bodrum_Castle,_Turkey.jpg">Mustang Joe</a> (CC0) ·
+    <a href="https://commons.wikimedia.org/wiki/File:Marmaris_Marina_View.jpg">Stern1994</a> (CC0) ·
+    <a href="https://commons.wikimedia.org/wiki/File:Yachts_in_G%C3%B6cek_Bay,_Turkey_(49070927017).jpg">dronepicr</a> (CC BY 2.0) ·
+    <a href="https://commons.wikimedia.org/wiki/File:%C3%96l%C3%BCdeniz_lagoon.jpg">Hsuparneeuq</a> (CC BY-SA 4.0) ·
+    <a href="https://commons.wikimedia.org/wiki/File:Harbour_of_Hydra_island_(43058393960).jpg">dronepicr</a> (CC BY 2.0) ·
+    <a href="https://commons.wikimedia.org/wiki/File:View-of-Hvar-from-Harbour.jpg">acediscovery</a> (CC BY 4.0)
   </p>
   <p class="fine">
     ViraCheck bir yardımcı araçtır; resmî denizcilik uyarılarının, seyir
