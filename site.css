@@ -68,9 +68,11 @@ a:hover{text-decoration:underline}
   font-size:clamp(2rem, 5.2vw, 3.35rem); line-height:1.1;
   letter-spacing:-.028em; margin:0 0 18px; font-weight:700;
 }
+/* Paragraf düğmenin altında: reklamdan telefonla gelen ziyaretçi App Store
+ * düğmesini kaydırmadan, ilk ekranda görmeli. */
 .hero .lead{
   font-size:clamp(1.02rem, 1.8vw, 1.2rem); color:var(--muted);
-  max-width:600px; margin:0 auto 28px;
+  max-width:600px; margin:28px auto 0;
 }
 .pill{
   display:inline-flex; align-items:center; gap:10px;
@@ -336,6 +338,13 @@ footer .links{margin:0 0 18px; display:flex; flex-wrap:wrap; gap:8px 20px}
 }
 @media (max-width:680px){
   section{padding:56px 0}
+  /* İlk ekranda App Store düğmesine yer açmak için kahramanın üstü sıkışıyor. */
+  .nav{padding:16px 0}
+  .hero-inner{padding-top:14px}
+  .hero .mark{width:64px; height:64px; border-radius:16px; margin-bottom:18px}
+  .hero h1{margin-bottom:14px}
+  .pill{padding:8px 16px; font-size:.86rem}
+  .store-btn{margin-top:16px}
   .grid, .plans, .partner-grid{grid-template-columns:1fr}
   .panel{padding:26px 22px}
   .offer-body{padding:22px 22px 24px}
