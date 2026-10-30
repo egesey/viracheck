@@ -1,0 +1,28 @@
+# ViraCheck
+
+> ViraCheck is a boat charter, day boat tour and passage-planning app for iPhone and iPad (iOS 16.4+), available in Turkish and English. It lists boat charters and day boat tours on the Turkish, Greek and Adriatic coasts, ranked by distance from the user, and adds marine weather, 9,310 coves and beaches, route planning, checklists, a logbook and an emergency (MAYDAY) screen. Free to download; no account required.
+
+ViraCheck; iPhone ve iPad için tekne kiralama, günübirlik tekne turu ve seyir asistanı uygulamasıdır (Türkçe ve İngilizce).
+
+## Key facts
+
+- App Store: https://apps.apple.com/us/app/viracheck/id6806044930 (Turkish store: https://apps.apple.com/tr/app/viracheck/id6806044930)
+- Platforms: iPhone and iPad, iOS 16.4 or later
+- Developer: Ege Seymen — contact egeseymen@icloud.com
+- Price: free; optional Pro subscription. Safety features (emergency screen, MAYDAY script, go/no-go advice) are always free.
+- Boat charter: 19 destinations — Bodrum, Marmaris, Göcek, Fethiye, Çeşme, Antalya, Istanbul (Turkey); Greece; 8 areas in Croatia; Mallorca; Miami. Listings from SamBoat, SkipperCity and Viravira.
+- Day boat tours: 12 destinations — Bodrum, Marmaris, Göcek, Fethiye, Çeşme, Antalya, the Bosphorus, Athens, the Greek islands, Split, Mallorca, Miami. Tours from GetYourGuide.
+- Booking, payment and contracts happen on the partner's own page; ViraCheck may earn a commission, which does not change the price.
+- Marine weather: wind direction and speed, gusts, Beaufort force, wave height and period, sea temperature, pressure (data: Open-Meteo), plus go / take care / not today advice.
+- Coves: 9,310 coves and beaches from OpenStreetMap, Blue Flag beaches and marinas marked, distances in nautical miles, multi-stop route planning.
+- Also: pre-departure checklists, logbook with PDF export, boat and document expiry reminders, next-day wind notifications, MAYDAY script with boat name, MMSI and position, one-tap calls to Coast Guard (158) and 112.
+- Privacy: no account, no ad network, no tracking; data stays on the device.
+- ViraCheck is an aid; it does not replace official marine warnings, nautical charts or the skipper's judgement.
+
+## Pages
+
+- [ViraCheck (English)](https://egesey.github.io/viracheck/index-en.html): features, destinations, pricing and FAQ
+- [ViraCheck (Türkçe)](https://egesey.github.io/viracheck/): özellikler, bölgeler, fiyatlandırma ve SSS
+- [Privacy Policy](https://egesey.github.io/viracheck/privacy-en.html)
+- [Gizlilik Politikası](https://egesey.github.io/viracheck/privacy-tr.html)
+- [KVKK Aydınlatma Metni](https://egesey.github.io/viracheck/kvkk-tr.html)
